@@ -35,4 +35,17 @@ window.addEventListener("load", () => {
       window.location.href = `${category}.html`;
     });
   });
+
+  import { animate, utils } from 'animejs';
+
+  animate('.square', {
+    x: $el => /** @type {HTMLElement} */($el).getAttribute('data-x'),
+    y: (_, i) => 50 + (-50 * i),
+    scale: (_, i, l) => (l - i) * .75,
+    rotate: () => utils.random(-360, 360),
+    borderRadius: () => `+=${utils.random(0, 8)}`,
+    duration: () => utils.random(1200, 1800),
+    delay: () => utils.random(0, 400),
+    ease: 'outElastic(1, .5)',
+  });
   
