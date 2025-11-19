@@ -41,6 +41,30 @@ body {
   transform: scale(1.05);
 }
 
+/* SCROLL BAR */
+/* ===== Scrollbar completo ===== */
+::-webkit-scrollbar {
+  width: 7px;         /* ancho de la barra */
+}
+
+/* ===== Fondo del track ===== */
+::-webkit-scrollbar-track {
+  background: #efd8b2; /* color de fondo */
+}
+
+/* ===== Thumb con imagen ===== */
+::-webkit-scrollbar-thumb {
+  background: url("../img/TEXTURE.jpg") no-repeat center;
+  background-size: cover; /* ajusta la imagen */
+  border-radius: 10px;
+}
+
+/* Hover del thumb */
+::-webkit-scrollbar-thumb:hover {
+  filter: brightness(1.1);
+}
+
+
 /* ===== CARRUSEL CAMPAÑA ===== */
 /* Contenedor principal del carrusel */
 #carouselExampleIndicators {
@@ -256,6 +280,28 @@ body {
 .show {
   opacity: 1;
   visibility: visible;
+}
+
+/* ===== COLLAGE ===== */
+#collage {
+  position: relative;
+  width: 100%;
+  height: 700px;          /* puedes ajustar */
+  background-color: #d94c2f; /* rojo similar al de la referencia */
+  overflow: hidden;
+  margin-top: 80px;
+}
+
+.collage-img {
+  position: absolute;
+  cursor: pointer;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+.collage-img:hover {
+  transform: scale(1.12);
+  opacity: 0.8;
 }
 
 .columna-fotos {
