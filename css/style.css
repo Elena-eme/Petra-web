@@ -1,150 +1,259 @@
 /* ===== BASE ===== */
 body {
-    background-color: #efd8b2; /* color arena */
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
+  background-color: #efd8b2; /* color arena */
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.bg-sand {
+  background-color: #efd8b2;
+}
+
+/* ===== NAVBAR ===== */
+.nav-container {
+  display: flex;
+  align-items: center;
+  padding: 10px 400px;
+}
+
+.nav-link {
+  color: #333;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+/* Logo más grande y centrado */
+.logo {
+  height: 100px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* ===== CARRUSEL CAMPAÑA ===== */
+/* Contenedor principal del carrusel */
+#carouselExampleIndicators {
+  width: 100%;
+  height: 70vh;              /* 70% de la altura de la ventana */
+  max-height: 800px;         /* Opcional: límite para pantallas muy grandes */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Aseguramos que todo dentro ocupe el 100% de la altura del carrusel */
+#carouselExampleIndicators .carousel-inner,
+#carouselExampleIndicators .carousel-item {
+  height: 100%;
+}
+
+/* Imágenes del carrusel */
+#carouselExampleIndicators .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         /* Recorta la imagen manteniendo proporción */
+  display: block;
+}
+
+/* Indicadores (los puntitos de abajo) */
+#carouselExampleIndicators .carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+#carouselExampleIndicators .carousel-indicators .active {
+  background-color: #ffffff;
+}
+
+/* Flechas de navegación */
+#carouselExampleIndicators .carousel-control-prev-icon,
+#carouselExampleIndicators .carousel-control-next-icon {
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.7));
+}
+
+/* BLOQUE TEXTO + BOTÓN DENTRO DEL CARRUSEL */
+.carousel-caption-custom {
+  position: absolute;
+  left: 5%;
+  bottom: 8%;
+  z-index: 10;
+  color: #fff;
+  text-align: left;
+  max-width: 320px;
+}
+
+.carousel-caption-custom h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Botón del carrusel */
+.btn-carousel {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 24px;
+  border-radius: 999px;
+  border: none;
+  background-color: #efd8b2;
+  color: #333;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-carousel:hover {
+  background-color: #e2c492;
+  transform: translateY(-1px);
+}
+
+/* RESPONSIVE: en móviles bajamos un poco la altura */
+@media (max-width: 768px) {
+  #carouselExampleIndicators {
+    height: 50vh;
+    border-radius: 0;        /* Si quieres que en móvil sea full-width sin bordes redondeados */
   }
-  
-  .bg-sand {
-    background-color: #efd8b2;
+
+  .carousel-caption-custom {
+    left: 5%;
+    bottom: 6%;
+    max-width: 260px;
   }
-  
-  /* ===== NAVBAR ===== */
-  .nav-container {
-    display: flex;
-   
-    align-items: center;
-    
-   
-    
-    padding: 10px 400px;
+
+  .carousel-caption-custom h2 {
+    font-size: 1.3rem;
   }
-  
-  .nav-link {
-    color: #333;
-    text-decoration: none;
-    font-weight: 300;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: color 0.3s ease;
-  }
-  
-  .nav-link:hover {
-    color: #000;
-    text-decoration: underline;
-  }
-  
-  /* Logo más grande y centrado */
-  .logo {
-    height: 100px;
-    transition: transform 0.3s ease;
-  }
-  
-  .logo:hover {
-    transform: scale(1.05);
-  }
-  
-  /* ===== GRID ===== */
+}
+
+/* ===== GRID ===== */
 .grid-layout {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    gap:1px;
-    overflow: hidden;
-    transition: all 1s ease-in-out;
-    padding: 70px 140px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+  overflow: hidden;
+  transition: all 1s ease-in-out;
+  padding: 40px 140px;
+  margin-top: 140px;      /* MÁS ESPACIO entre carrusel y grid */
+}
+
+.grid-item {
+  width: 13%;
+  height: 320px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  position: relative;
+  transition: all 1s ease;
+}
+
+/* ===== COLORES DE FONDO ===== */
+.color1 { background-color: #b58b64; }
+.color2 { background-color: #7ca6a1; }
+.color3 { background-color: #59353a; }
+.color4 { background-color: #a04848; }
+
+/* ===== IMÁGENES ===== */
+.img1 { background-image: url('../img/sofa.png'); }
+.img2 { background-image: url('../img/deco.png'); }
+.img3 { background-image: url('../img/lampara.png'); }
+.img4 { background-image: url('../img/silla.png'); } 
+
+/* ===== HOVER: muestra categoría ===== */
+.grid-item::after {
+  content: attr(data-category);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 300;
+  background: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.grid-item:hover::after {
+  opacity: 1;
+}
+
+/* ===== VISTA EXPANDIDA ===== */
+.grid-layout.expanded {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* ahora 4 columnas */
+  grid-template-rows: repeat(2, 320px);
+  gap: 0px;
+  padding: 15px 0px;
+}
+
+.grid-layout.expanded .grid-item {
+  width: 100%;
+  height: 320px;
+}
+
+/* Ajuste extra en móvil para el grid */
+@media (max-width: 768px) {
+  .grid-layout {
+    flex-wrap: wrap;
+    padding: 30px 20px;
+    margin-top: 90px;
   }
-  
+
   .grid-item {
-    width: 13%;
-    height: 320px;
-    background-size: cover;
-    background-position: center;
-    cursor: pointer;
-    position: relative;
-    transition: all 1s ease;
+    width: 45%;
+    margin-bottom: 10px;
   }
-  
-  /* ===== COLORES DE FONDO ===== */
-  .color1 { background-color: #b58b64; }
-  .color2 { background-color: #7ca6a1; }
-  .color3 { background-color: #59353a; }
-  .color4 { background-color: #a04848; }
-  
-  /* ===== IMÁGENES ===== */
-  .img1 { background-image: url('../img/sofa.png'); }
-  .img2 { background-image: url('../img/deco.png'); }
-  .img3 { background-image: url('../img/lampara.png'); }
-  .img4 { background-image: url('../img/silla.png'); } 
-  
-  /* ===== HOVER: muestra categoría ===== */
-  .grid-item::after {
-    content: attr(data-category);
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-size: 0.9rem;
-    font-weight: 300;
-    background: rgba(0, 0, 0, 0.55);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-  }
-  .grid-item:hover::after {
-    opacity: 1;
-  }
-  
-  /* ===== VISTA EXPANDIDA ===== */
-  .grid-layout.expanded {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* ahora 4 columnas */
-    grid-template-rows: repeat(2, 320px);
-    gap: 0px;
-    padding: 15px 0px;
-  }
-  
-  .grid-layout.expanded .grid-item {
-    width: 100%;
-    height: 320px;
-  }
-  
-  
+}
+
 /* ===== PRELOADER ===== */
 #preloader {
-    position: fixed;
-    inset: 0;
-    background-color: #efd8b2; /* fondo arena */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    transition: opacity 0.8s ease;
-  }
-  
-  .preloader-logo {
-    width: 180px;
-    height: auto;
-    opacity: 0;
-    animation: fadeInLogo 0.5s ease forwards;
-  }
-  
-  @keyframes fadeInLogo {
-    from { opacity: 0; transform: scale(0.95); }
-    to { opacity: 1; transform: scale(1); }
-  }
-  
-  .hidden {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.5s ease;
-  }
-  
-  .show {
-    opacity: 1;
-    visibility: visible;
-  }
-  
+  position: fixed;
+  inset: 0;
+  background-color: #efd8b2; /* fondo arena */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.8s ease;
+}
+
+.preloader-logo {
+  width: 180px;
+  height: auto;
+  opacity: 0;
+  animation: fadeInLogo 0.5s ease forwards;
+}
+
+@keyframes fadeInLogo {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+}
