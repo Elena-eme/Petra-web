@@ -41,6 +41,30 @@ body {
   transform: scale(1.05);
 }
 
+/* SCROLL BAR */
+/* ===== Scrollbar completo ===== */
+::-webkit-scrollbar {
+  width: 7px;         /* ancho de la barra */
+}
+
+/* ===== Fondo del track ===== */
+::-webkit-scrollbar-track {
+  background: #efd8b2; /* color de fondo */
+}
+
+/* ===== Thumb con imagen ===== */
+::-webkit-scrollbar-thumb {
+  background: url("../img/TEXTURE.jpg") no-repeat center;
+  background-size: cover; /* ajusta la imagen */
+  border-radius: 10px;
+}
+
+/* Hover del thumb */
+::-webkit-scrollbar-thumb:hover {
+  filter: brightness(1.1);
+}
+
+
 /* ===== CARRUSEL CAMPAÑA ===== */
 /* Contenedor principal del carrusel */
 #carouselExampleIndicators {
