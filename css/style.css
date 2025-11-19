@@ -284,37 +284,40 @@ body {
   }
 }
 
-/* ===== COLLAGE ===== */
-#collage {
-  position: relative;
+
+#mapa-collage {
   width: 100%;
-  height: 700px;          /* puedes ajustar */
-  background-color: #d94c2f; /* rojo similar al de la referencia */
-  overflow: hidden;
-  margin-top: 80px;
+  display: flex;
+  /* justify-content: center; */
+  margin-top: 120px;
 }
 
-.collage-img {
-  position: absolute;
-  cursor: pointer;
-  transition: transform 0.4s ease, opacity 0.4s ease;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
-}
-
-.collage-img:hover {
-  transform: scale(1.12);
-  opacity: 0.8;
-}
-
-.columna-fotos {
-  display: flex;          /* Activa flexbox */
-  flex-direction: column; /* Columna vertical */
-  align-items: flex-start;/* Alineado a la izquierda */
-  gap: 10px;              /* Espacio entre fotos (opcional) */
-  padding: 10px;
-}
-
-.columna-fotos img {
-  width: 150px;           /* Tamaño opcional */
+#mapa-container {
+  position: relative;
+  width: 1000px;         /* ajusta a tu mapa */
   height: auto;
+}
+
+#mapa-fondo {
+  
+  width: 210vh;
+  padding-left: 20px;
+
+  display: block;
+}
+
+.map-item {
+  position: absolute;
+  width: 140px;           /* ajusta tamaño */
+  cursor: grab;
+  transition: opacity 0.3s ease;
+}
+
+.map-item:active {
+  cursor: grabbing;
+}
+
+.map-item:hover {
+  opacity: 0.85;
+  transform: scale(1.25);   /* ← se agranda más */
 }

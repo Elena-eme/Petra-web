@@ -36,48 +36,30 @@ window.addEventListener("load", () => {
     });
   });
 
+$(document).ready(function() {
 
-// ===== COLLAGE ALEATORIO =====
-$(document).ready(function () {
+  // Posiciones fijas sobre el mapa
+  const posiciones = {
+    item1: { top: 50, left: 120 },
+    item2: { top: 280, left: 400 },
+    item3: { top: 500, left: 150 },
+    item4: { top: 360, left: 700 }
+  };
 
-  // Lista de imágenes para usar (pon las que tú quieras)
-  const imagenes = [
-    "img/TEXTURE.jpg",
-    "img/img2.jpg",
-    "img/img3.jpg",
-    "img/img4.jpg",
-    "img/img5.jpg",
-    "img/img6.jpg"
-  ];
-
-  const collage = $("#collage");
-
-  // Generar de 6 a 10 imágenes aleatorias
-  const cantidad = Math.floor(Math.random() * 4) + 6;
-
-  for (let i = 0; i < cantidad; i++) {
-    const imgSrc = imagenes[Math.floor(Math.random() * imagenes.length)];
-
-    // Tamaños aleatorios
-    const size = Math.floor(Math.random() * 120) + 140; // 140px–260px
-
-    // Posición aleatoria dentro del collage
-    const posX = Math.random() * (collage.width() - size);
-    const posY = Math.random() * (collage.height() - size);
-
-    // Crear imagen
-    const img = $("<img>")
-      .attr("src", imgSrc)
-      .addClass("collage-img")
-      .css({
-        width: size + "px",
-        top: posY + "px",
-        left: posX + "px",
-        transform: `rotate(${Math.random() * 20 - 10}deg)` // leve rotación
-      });
-
-    collage.append(img);
+  // Aplicar posiciones iniciales
+  for (let id in posiciones) {
+    $("#" + id).css({
+      top: posiciones[id].top,
+      left: posiciones[id].left
+    });
   }
+
+  // Hacer que las imágenes se puedan arrastrar
+  $(".map-item").draggable({
+    revert: true,            // vuelve a su sitio al soltar
+    revertDuration: 300
+  });
+
 });
 
 
