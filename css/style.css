@@ -31,6 +31,43 @@ body {
   text-decoration: underline;
 }
 
+
+/* ===== PRELOADER ===== */
+#preloader {
+  position: fixed;
+  inset: 0;
+  background-color: #efd8b2; /* fondo arena */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.8s ease;
+}
+
+.preloader-logo {
+  width: 180px;
+  height: auto;
+  opacity: 0;
+  animation: fadeInLogo 0.5s ease forwards;
+}
+
+@keyframes fadeInLogo {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
 /* Logo más grande y centrado */
 .logo {
   height: 100px;
@@ -245,41 +282,6 @@ body {
     width: 45%;
     margin-bottom: 10px;
   }
-}
-
-/* ===== PRELOADER ===== */
-#preloader {
-  position: fixed;
-  inset: 0;
-  background-color: #efd8b2; /* fondo arena */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  transition: opacity 0.8s ease;
-}
-
-.preloader-logo {
-  width: 180px;
-  height: auto;
-  opacity: 0;
-  animation: fadeInLogo 0.5s ease forwards;
-}
-
-@keyframes fadeInLogo {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
-}
-
-.hidden {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s ease;
-}
-
-.show {
-  opacity: 1;
-  visibility: visible;
 }
 
 /* ===== COLLAGE ===== */
