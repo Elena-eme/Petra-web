@@ -36,16 +36,17 @@ window.addEventListener("load", () => {
     });
   });
 
-  import { animate, utils } from 'animejs';
 
-  animate('.square', {
-    x: $el => /** @type {HTMLElement} */($el).getAttribute('data-x'),
-    y: (_, i) => 50 + (-50 * i),
-    scale: (_, i, l) => (l - i) * .75,
-    rotate: () => utils.random(-360, 360),
-    borderRadius: () => `+=${utils.random(0, 8)}`,
-    duration: () => utils.random(1200, 1800),
-    delay: () => utils.random(0, 400),
-    ease: 'outElastic(1, .5)',
-  });
-  
+
+
+ anime({
+  targets: '.square',
+  translateX: el => el.getAttribute('data-x'),
+  translateY: (_, i) => 50 + (-50 * i),
+  scale: (_, i, l) => (l - i) * .75,
+  rotate: () => anime.random(-360, 360),
+  borderRadius: () => `${anime.random(0, 8)}px`,
+  duration: () => anime.random(1200, 1800),
+  delay: () => anime.random(0, 400),
+  easing: 'easeOutElastic(1, .5)',
+});
