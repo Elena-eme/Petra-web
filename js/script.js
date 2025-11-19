@@ -10,8 +10,8 @@ window.addEventListener("load", () => {
         preloader.style.display = "none";
         mainContent.classList.remove("hidden");
         mainContent.classList.add("show");
-      }, 800);
-    }, 2000);
+      }, 100);
+    }, 300);
   });
   
   // ===== GRID INTERACTION =====
