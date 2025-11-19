@@ -39,14 +39,4 @@ window.addEventListener("load", () => {
 
 
 
- anime({
-  targets: '.square',
-  translateX: el => el.getAttribute('data-x'),
-  translateY: (_, i) => 50 + (-50 * i),
-  scale: (_, i, l) => (l - i) * .75,
-  rotate: () => anime.random(-360, 360),
-  borderRadius: () => `${anime.random(0, 8)}px`,
-  duration: () => anime.random(1200, 1800),
-  delay: () => anime.random(0, 400),
-  easing: 'easeOutElastic(1, .5)',
-});
+ 

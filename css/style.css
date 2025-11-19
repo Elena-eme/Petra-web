@@ -257,3 +257,16 @@ body {
   opacity: 1;
   visibility: visible;
 }
+
+.columna-fotos {
+  display: flex;          /* Activa flexbox */
+  flex-direction: column; /* Columna vertical */
+  align-items: flex-start;/* Alineado a la izquierda */
+  gap: 10px;              /* Espacio entre fotos (opcional) */
+  padding: 10px;
+}
+
+.columna-fotos img {
+  width: 150px;           /* Tamaño opcional */
+  height: auto;
+}
