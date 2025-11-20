@@ -676,7 +676,110 @@ body {
 }
 
 
-/*PAGINA CATALOGO*/
+/*--------------------PAGINA CATALOGO----------------*/
+/* Sección prueba catálogo */
+/* ============================= */
+/*   CATALOGO SECCIONES (GRID)   */
+/* ============================= */
+
+.catalogo-secciones {
+  text-align: center;
+}
+
+.catalogo-secciones .section-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+.secciones-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  padding: 20px 0;
+}
+
+.seccion-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.seccion-img {
+  width: 180px;
+  height: auto;
+  object-fit: contain;
+}
+
+.seccion-nombre {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 12px;
+  text-transform: uppercase;
+}
+
+.seccion-precio {
+  color: #333;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.btn-add {
+  background: black;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.btn-add:hover {
+  opacity: 0.8;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .secciones-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .secciones-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.seccion-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+/* NUEVA CAJA COMÚN PARA LAS IMÁGENES */
+.seccion-img-wrapper {
+  height: 260px;              /* ajusta esta altura si quieres más/menos */
+  width: 100%;
+  display: flex;
+  align-items: flex-end;      /* alinea todas al MISMO nivel inferior */
+  justify-content: center;
+}
+
+/* IMAGEN DENTRO DE LA CAJA */
+.seccion-img {
+  max-height: 100%;
+  max-width: 180px;
+  object-fit: contain;
+}
+
+
 /*Animación catalogo*/
 .catalogo-animado {
   position: relative;
@@ -720,7 +823,7 @@ body {
 }
 
 
-/* ABOUT US */
+/* --------------PÁGINA ABOUT US---------------------- */
 /* Sección fullscreen */
 .video-section {
   position: relative;
