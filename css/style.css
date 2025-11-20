@@ -888,25 +888,30 @@ body {
  /* HEAD */
 
 /* FOOTER REVEAL */
-/* ==========================
-   FOOTER ANIMADO
-   ========================== */
+.footer-hero {
+  position: relative;
+  min-height: 80vh; /* altura del footer */
+  padding: 60px 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 
-   .footer-hero {
-    position: relative;
-    min-height: 80vh; /* altura del footer, ajústala a tu gusto */
-    padding: 60px 20px 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  color: #ffffff;
+
+  /* Fondo negro + imagen + capa oscura */
+  background-color: #000000;
+  background-image:
+    linear-gradient(rgba(5, 14, 49, 0.5), rgba(9, 12, 69, 0.5)), 
+    url("../img/footer.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
   
-    color: #ffffff;
-    background:
-      #000000 url("../img/footer.png") center center / cover no-repeat;
-    overflow: hidden;
-  }
-  
+
   /* Capa de degradado animado por encima de la imagen */
   .footer-overlay {
     position: absolute;
