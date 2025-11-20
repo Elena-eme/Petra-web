@@ -63,4 +63,25 @@ $(document).ready(function() {
 });
 
 
- 
+
+//NEWSLETTER - HOME
+const newsletterOpenBtn = document.getElementById("newsletter-open-modal");
+const newsletterCloseBtn = document.getElementById("newsletter-close-modal");
+const newsletterModal = document.getElementById("newsletter-modal");
+
+if (newsletterOpenBtn && newsletterCloseBtn && newsletterModal) {
+  newsletterOpenBtn.addEventListener("click", () => {
+    newsletterModal.classList.add("show");
+  });
+
+  newsletterCloseBtn.addEventListener("click", () => {
+    newsletterModal.classList.remove("show");
+  });
+
+  // Cerrar al hacer click fuera del cuadro
+  newsletterModal.addEventListener("click", (e) => {
+    if (e.target === newsletterModal) {
+      newsletterModal.classList.remove("show");
+    }
+  });
+}

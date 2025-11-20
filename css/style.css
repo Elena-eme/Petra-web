@@ -321,3 +321,107 @@ body {
   opacity: 0.85;
   transform: scale(1.25);   /* ← se agranda más */
 }
+
+/* NEWSLETTER - HOME */
+.newsletter-section {
+  position: relative;
+  min-height: 100vh; /* ocupa toda la altura de la ventana */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background-color: #e7e5df;
+  background-image: url("../img/img_jarrones.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;         /* jarrones grandes al fondo */
+  background-attachment: fixed;     /* efecto "fijo" al hacer scroll */
+}
+
+.newsletter-content {
+  max-width: 480px;
+}
+
+/* texto */
+.newsletter-content h1 {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.newsletter-content p {
+  font-size: 11px;
+  margin-bottom: 24px;
+}
+
+/* botón rojo */
+.cta-btn {
+  background-color: #c44a3b;
+  color: #ffffff;
+  border: none;
+  padding: 10px 40px;
+  font-size: 12px;
+  cursor: pointer;
+  text-transform: lowercase;
+}
+
+.cta-btn:hover {
+  opacity: 0.9;
+}
+
+/* --------- MODAL SOLO NEWSLETTER ---------- */
+
+.newsletter-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;               /* oculto por defecto */
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.newsletter-modal.show {
+  display: flex;
+}
+
+.newsletter-modal-content {
+  background: #ffffff;
+  padding: 24px 32px;
+  max-width: 400px;
+  width: 90%;
+  position: relative;
+}
+
+.newsletter-modal-content h2 {
+  margin-bottom: 12px;
+}
+
+.newsletter-modal-content p {
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.newsletter-modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.newsletter-modal-content input[type="email"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.newsletter-modal-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+}
