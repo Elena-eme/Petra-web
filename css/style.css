@@ -427,3 +427,24 @@ body {
   font-size: 20px;
   cursor: pointer;
 }
+
+/* --------- NUMEROS - HOME ---------- */
+
+
+.kpi-section {
+  padding: 100px 0;             
+}
+
+.kpi-item {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.kpi-number {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.kpi-label {
+  font-size: 14px;
+}
