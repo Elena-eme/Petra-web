@@ -72,18 +72,31 @@ const newsletterCloseBtn = document.getElementById("newsletter-close-modal");
 const newsletterModal = document.getElementById("newsletter-modal");
 
 if (newsletterOpenBtn && newsletterCloseBtn && newsletterModal) {
+  // Abrir
   newsletterOpenBtn.addEventListener("click", () => {
-    newsletterModal.classList.add("show");
+    newsletterModal.classList.add("is-open");
+    newsletterModal.setAttribute("aria-hidden", "false");
   });
 
+  // Cerrar con la X
   newsletterCloseBtn.addEventListener("click", () => {
-    newsletterModal.classList.remove("show");
+    newsletterModal.classList.remove("is-open");
+    newsletterModal.setAttribute("aria-hidden", "true");
   });
 
-  // Cerrar al hacer click fuera del cuadro
-  newsletterModal.addEventListener("click", (e) => {
-    if (e.target === newsletterModal) {
-      newsletterModal.classList.remove("show");
+  // Cerrar al hacer click fuera del cuadro blanco
+  newsletterModal.addEventListener("click", (event) => {
+    if (event.target === newsletterModal) {
+      newsletterModal.classList.remove("is-open");
+      newsletterModal.setAttribute("aria-hidden", "true");
+    }
+  });
+
+  // Cerrar con la tecla ESC
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && newsletterModal.classList.contains("is-open")) {
+      newsletterModal.classList.remove("is-open");
+      newsletterModal.setAttribute("aria-hidden", "true");
     }
   });
 }

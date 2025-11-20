@@ -9,6 +9,8 @@ body {
   background-color: #efd8b2;
 }
 
+
+
 /* ===== NAVBAR ===== */
 .nav-container {
   display: flex;
@@ -274,6 +276,54 @@ body {
 }
 
 /* ===== GRID ===== */
+
+/* Contenedor centrado */
+.catalogo {
+  display: flex;
+  justify-content: center;  /* centro horizontal */
+  align-items: center;      /* centro vertical */
+  height: 10vh;            /* altura completa de la pantalla */
+  text-align: center;
+
+}
+
+/* Estilo del h2 con subrayado animado */
+.catalogo h2 {
+  display: inline-block;       
+  color: #333;
+  font-weight: 300;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Subrayado animado */
+.catalogo h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;               
+  width: 0%;                  
+  height: 3px;                
+  background: linear-gradient(#a4312b);
+  transition: width 0.5s ease, background 0.5s ease;
+}
+
+/* Hover: línea se expande y cambia de color */
+.catalogo h2:hover::after {
+  width: 100%;
+  background: linear-gradient(#a4312b);
+}
+
+/* Hover: color del texto */
+.catalogo h2:hover {
+  color: #a4312b;
+}
+
+
 .grid-layout {
   display: flex;
   flex-wrap: nowrap;
@@ -283,7 +333,7 @@ body {
   overflow: hidden;
   transition: all 1s ease-in-out;
   padding: 40px 140px;
-  margin-top: 140px;      /* MÁS ESPACIO entre carrusel y grid */
+  margin-top: 70px;      /* MÁS ESPACIO entre carrusel y grid */
 }
 
 .grid-item {
@@ -398,25 +448,35 @@ body {
 /* NEWSLETTER - HOME */
 .newsletter-section {
   position: relative;
-  min-height: 100vh;                
+  min-height: 200vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-
-  background-color: #e7e5df;
-  background-image: url("../img/img_jarrones.png");
-  background-repeat: no-repeat;
-
-  background-size: contain;         
-  background-position: center bottom;
+  overflow: hidden;
+  padding: 40px 0;          /* sin padding lateral para que llegue al borde */
 }
 
+.newsletter-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* ocupa todo el ancho y alto */
+  object-position: center;  /* puedes poner center bottom si prefieres */
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Contenido (texto + botón) centrado por encima de la imagen */
 .newsletter-content {
+  position: relative;
+  z-index: 1;
   max-width: 480px;
+  top: -6vh;                      /* lo subimos un poco al hueco entre jarrones */
 }
 
-/* texto */
+/* Tipografía */
 .newsletter-content h1 {
   font-size: 12px;
   letter-spacing: 0.12em;
@@ -429,7 +489,7 @@ body {
   margin-bottom: 24px;
 }
 
-/* botón rojo */
+/* Botón rojo */
 .cta-btn {
   background-color: #c44a3b;
   color: #ffffff;
@@ -444,19 +504,21 @@ body {
   opacity: 0.9;
 }
 
-/* --------- MODAL SOLO NEWSLETTER ---------- */
+/* =========================================
+   MODAL NEWSLETTER
+   ========================================= */
 
 .newsletter-modal {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
-  display: none;             
+  display: none;                  /* oculto por defecto */
   align-items: center;
   justify-content: center;
   z-index: 1000;
 }
 
-.newsletter-modal.show {
+.newsletter-modal.is-open {
   display: flex;
 }
 
@@ -489,6 +551,7 @@ body {
   border: 1px solid #ccc;
 }
 
+/* Botón de cerrar (X) */
 .newsletter-modal-close {
   position: absolute;
   top: 8px;
@@ -519,7 +582,6 @@ body {
 .kpi-label {
   font-size: 14px;
 }
-
 
 
 /*PAGINA CATALOGO*/
@@ -565,3 +627,51 @@ body {
   z-index: 1000;
 }
 
+
+/* ABOUT US */
+/* Sección fullscreen */
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;  /* ocupa toda la pantalla */
+  overflow: hidden;
+}
+
+/* Video de fondo */
+.video-section .video-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* cubre toda la pantalla sin deformar */
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* Overlay para contenido encima del video */
+.video-section .video-overlay {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Botón centrado */
+.video-section .cta-btn {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  background-color: #c44a3b;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.video-section .cta-btn:hover {
+  background-color: #ff5e4d;
+  transform: translateY(-3px);
+}
