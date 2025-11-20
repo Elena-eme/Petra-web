@@ -317,7 +317,7 @@ body {
 .map-item:active {
   cursor: grabbing;
 }
-<<<<<<< HEAD
+/* HEAD */
 
 .map-item:hover {
   opacity: 0.85;
@@ -427,5 +427,3 @@ body {
   font-size: 20px;
   cursor: pointer;
 }
-=======
->>>>>>> 8abf67e1da6981c6c1d81bfc12584cb68962c5b0
