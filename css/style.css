@@ -871,6 +871,234 @@ body {
   transform: translateY(-3px);
 }
 
+ /* HEAD */
+
+/* FOOTER REVEAL */
+/* ==========================
+   FOOTER ANIMADO
+   ========================== */
+
+   .footer-hero {
+    position: relative;
+    min-height: 80vh; /* altura del footer, ajústala a tu gusto */
+    padding: 60px 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  
+    color: #ffffff;
+    background:
+      #000000 url("../img/footer.png") center center / cover no-repeat;
+    overflow: hidden;
+  }
+  
+  /* Capa de degradado animado por encima de la imagen */
+  .footer-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 0% 0%, rgba(255, 255, 255, 0.15), transparent 50%),
+                radial-gradient(circle at 100% 100%, rgba(196, 74, 59, 0.35), transparent 55%);
+    mix-blend-mode: soft-light;
+    opacity: 0.8;
+    animation: footerGlow 18s ease-in-out infinite alternate;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  @keyframes footerGlow {
+    0% {
+      transform: translate3d(-5%, 0, 0) scale(1);
+      opacity: 0.7;
+    }
+    50% {
+      transform: translate3d(3%, -3%, 0) scale(1.05);
+      opacity: 1;
+    }
+    100% {
+      transform: translate3d(5%, 3%, 0) scale(1.03);
+      opacity: 0.85;
+    }
+  }
+  
+  /* Lucecitas flotando */
+  .footer-lights {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .footer-lights .light {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.45);
+    filter: blur(1px);
+    animation: floatLight 10s ease-in-out infinite;
+  }
+  
+  .footer-lights .light-1 {
+    top: 15%;
+    left: 20%;
+    animation-duration: 11s;
+  }
+  .footer-lights .light-2 {
+    top: 35%;
+    right: 18%;
+    animation-duration: 13s;
+  }
+  .footer-lights .light-3 {
+    bottom: 20%;
+    left: 50%;
+    animation-duration: 16s;
+  }
+  
+  @keyframes floatLight {
+    0% {
+      transform: translate3d(0, 0, 0);
+      opacity: 0.2;
+    }
+    25% {
+      transform: translate3d(-10px, -20px, 0);
+      opacity: 0.6;
+    }
+    50% {
+      transform: translate3d(10px, -10px, 0);
+      opacity: 0.9;
+    }
+    75% {
+      transform: translate3d(5px, 10px, 0);
+      opacity: 0.5;
+    }
+    100% {
+      transform: translate3d(0, 0, 0);
+      opacity: 0.3;
+    }
+  }
+  
+  /* Contenido principal */
+  .footer-content {
+    position: relative;
+    z-index: 2;
+    max-width: 540px;
+    animation: footerFadeUp 1.2s ease-out both;
+  }
+  
+  @keyframes footerFadeUp {
+    0% {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .footer-content h2 {
+    font-size: 22px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  
+  .footer-content p {
+    font-size: 14px;
+    max-width: 420px;
+    margin: 0 auto 24px;
+  }
+  
+  /* Botones */
+  .footer-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+  
+  .footer-btn {
+    border-radius: 999px;
+    padding: 10px 26px;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    background: transparent;
+    color: #ffffff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease,
+      background-color 0.2s ease, color 0.2s ease;
+  }
+  
+  .footer-btn-primary {
+    background-color: rgba(196, 74, 59, 0.9);
+    border-color: transparent;
+  }
+  
+  .footer-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    background-color: #ffffff;
+    color: #111111;
+  }
+  
+  /* Social */
+  .footer-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+  }
+  
+  .footer-social-links {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .footer-social-links a {
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: background-color 0.2s ease, transform 0.2s ease,
+      border-color 0.2s ease;
+  }
+  
+  .footer-social-links a:hover {
+    background-color: #ffffff;
+    color: #111111;
+    border-color: transparent;
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive pequeño */
+  @media (max-width: 600px) {
+    .footer-hero {
+      min-height: 70vh;
+      padding: 40px 16px 32px;
+    }
+  
+    .footer-content h2 {
+      font-size: 18px;
+    }
+  
+    .footer-content p {
+      font-size: 13px;
+    }
+  }
+  
 /* PRODUCTO PÁGINA */
 
 /* ===== LAYOUT ESTILO ALPHAWOOD – CATALOGO ===== */
