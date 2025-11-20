@@ -289,6 +289,7 @@ body {
 
 /* Estilo del h2 con subrayado animado */
 .catalogo h2 {
+  background-color: #efd8b2;
   display: inline-block;       
   color: #333;
   font-weight: 300;
@@ -417,7 +418,7 @@ body {
 
   position: relative;
   overflow: hidden;             /* Las fotos NO pueden salirse */
-  margin-top: 35vh;
+  margin-top: 25vh;
   margin-bottom: 35vh;
 
 }
