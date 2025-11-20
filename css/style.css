@@ -108,6 +108,97 @@ body {
   text-decoration: underline;
 }
 
+/* ===== BOTÓN CESTA FLOTANTE ===== */
+.cart-fab {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background-color: #a4312b;    /* color PETRA */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  z-index: 1200;                /* por encima del contenido */
+}
+
+/* Imagen dentro del círculo */
+.cart-fab-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* rellena el círculo completamente */
+  border-radius: 50%;  /* recorta la imagen dentro del círculo */
+}
+
+
+/* Texto "añadir" redondeado que sale fuera del círculo */
+.cart-fab-label {
+  position: absolute;
+  right: 74px;                  /* se coloca a la izquierda del círculo */
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #a4312b;
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 999px;         /* pastilla redonda */
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* Mostrar el texto al hacer hover */
+.cart-fab:hover .cart-fab-label {
+  opacity: 1;
+  transform: translateY(-50%) translateX(-4px);
+}
+
+/* En pantallas muy pequeñas, que no estorbe tanto */
+@media (max-width: 575px) {
+  .cart-fab {
+    bottom: 16px;
+    right: 16px;
+    width: 54px;
+    height: 54px;
+  }
+
+  .cart-fab-label {
+    font-size: 0.6rem;
+    right: 66px;
+  }
+}
+
+/* Texto encima del botón circular */
+.cart-fab-title {
+  position: fixed;
+  bottom: 100px;                  /* Se coloca encima del botón */
+  right: 33px;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #333;
+  font-weight: 500;
+  z-index: 1200;
+  pointer-events: none;           /* No afecta al hover del botón */
+}
+
+@media (max-width: 575px) {
+  .cart-fab-title {
+    bottom: 88px;
+    right: 26px;
+    font-size: 0.7rem;
+  }
+}
+
 
 
 /* ===== PRELOADER ===== */
@@ -778,4 +869,142 @@ body {
 .video-section .cta-btn:hover {
   background-color: #ff5e4d;
   transform: translateY(-3px);
+}
+
+/* PRODUCTO PÁGINA */
+
+/* ===== LAYOUT ESTILO ALPHAWOOD – CATALOGO ===== */
+
+.catalogo-animado {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 48px;
+  padding: 0px 10vw;
+  min-height: 70vh;
+}
+
+/* Columna izquierda */
+.catalogo-left {
+  flex: 0 0 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Títulos tipo "Warm / Armchair" */
+.catalogo-titulos {
+  margin-bottom: 24px;
+}
+
+.catalogo-nombre {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.catalogo-tipo {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  margin: 6px 0 0;
+}
+
+/* Lista de miniaturas (usa la animación actual de .product-square) */
+.product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin: 24px 0;
+}
+
+.square {
+  width: 130px;
+  height: 130px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Bloque de información bajo las miniaturas */
+.catalogo-info {
+  font-size: 0.8rem;
+  max-width: 260px;
+}
+
+.info-titulo {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 2px;
+}
+
+.info-texto {
+  margin: 0;
+}
+
+/* Línea vertical central */
+.catalogo-linea {
+  align-self: center;
+  width: 1px;
+  height: 80%;
+  background-color: rgb(0, 0, 0);
+}
+
+/* Columna derecha con la imagen grande */
+.catalogo-right {
+  flex: 0 0 55%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.catalogo-hero-img {
+  max-width: 100%;
+  max-height: 800px;
+  object-fit: contain;
+}
+.catalogo-linea {
+  align-self: stretch;              /* ocupa toda la altura del contenedor */
+  width: 2px;                       /* un poco más ancha */
+  background-color: #000000;        /* rojo PETRA para que destaque */
+  opacity: 0.9;
+}
+
+
+
+/* Responsive: en tablet/móvil se apila todo */
+@media (max-width: 992px) {
+  .catalogo-animado {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 24px;
+  }
+
+  .catalogo-left,
+  .catalogo-right {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+  .catalogo-linea {
+    width: 60%;
+    height: 1px;
+    margin: 24px 0;
+  }
+
+  .product-list {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .square {
+    width: 90px;
+    height: 90px;
+  }
+
+  .catalogo-right {
+    justify-content: center;
+  }
 }
