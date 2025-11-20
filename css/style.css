@@ -679,7 +679,8 @@ body {
 /*--------------------PAGINA CATALOGO----------------*/
 /* Sección prueba catálogo */
 /* ============================= */
-/*   CATALOGO SECCIONES (GRID)   */
+/* ============================= */
+/*   CARRUSEL CATALOGO SECCIONES */
 /* ============================= */
 
 .catalogo-secciones {
@@ -693,26 +694,54 @@ body {
   text-align: left;
 }
 
-.secciones-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
-  padding: 20px 0;
+/* Contenedor general del carrusel */
+.secciones-carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
+/* Ventana visible */
+.secciones-viewport {
+  overflow: hidden;
+  flex: 1;
+}
+
+/* Pista deslizante */
+.secciones-track {
+  display: flex;
+  gap: 40px;
+  transition: transform 0.4s ease;
+}
+
+/* Tarjeta de producto */
 .seccion-item {
+  flex: 0 0 25%;          /* 4 productos visibles en desktop */
+  min-width: 220px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 10px;
 }
 
+/* Caja común para imágenes */
+.seccion-img-wrapper {
+  height: 260px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* Imagen */
 .seccion-img {
-  width: 180px;
-  height: auto;
+  max-height: 100%;
+  max-width: 180px;
   object-fit: contain;
 }
 
+/* Texto */
 .seccion-nombre {
   font-size: 0.9rem;
   font-weight: 500;
@@ -726,6 +755,7 @@ body {
   margin-bottom: 10px;
 }
 
+/* Botón añadir */
 .btn-add {
   background: black;
   color: white;
@@ -743,84 +773,68 @@ body {
   opacity: 0.8;
 }
 
-/* ===== RESPONSIVE ===== */
+/* Flechas */
+.secciones-arrow {
+  border: none;
+  background: #000;
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-size: 18px;
+  transition: opacity 0.3s ease;
+}
+
+.secciones-arrow:hover {
+  opacity: 0.8;
+}
+
+.secciones-arrow[disabled] {
+  opacity: 0.3;
+  cursor: default;
+}
+
+/* Barra de progreso */
+.secciones-progress {
+  margin-top: 18px;
+  height: 2px;
+  background: rgba(0,0,0,0.15);
+}
+
+.secciones-progress-bar {
+  width: 0%;
+  height: 100%;
+  background: #000;
+  transition: width 0.3s ease;
+}
+
+/* ============================= */
+/*   RESPONSIVE CARRUSEL         */
+/* ============================= */
+
 @media (max-width: 992px) {
-  .secciones-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .seccion-item {
+    flex: 0 0 33.33%;   /* 3 productos visibles */
+  }
+}
+
+@media (max-width: 768px) {
+  .seccion-item {
+    flex: 0 0 50%;      /* 2 productos visibles */
   }
 }
 
 @media (max-width: 576px) {
-  .secciones-grid {
-    grid-template-columns: 1fr;
+  .seccion-item {
+    flex: 0 0 100%;     /* 1 producto visible */
   }
 }
 
-.seccion-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px;
-}
-
-/* NUEVA CAJA COMÚN PARA LAS IMÁGENES */
-.seccion-img-wrapper {
-  height: 260px;              /* ajusta esta altura si quieres más/menos */
-  width: 100%;
-  display: flex;
-  align-items: flex-end;      /* alinea todas al MISMO nivel inferior */
-  justify-content: center;
-}
-
-/* IMAGEN DENTRO DE LA CAJA */
-.seccion-img {
-  max-height: 100%;
-  max-width: 180px;
-  object-fit: contain;
-}
-
-
-/*Animación catalogo*/
-.catalogo-animado {
-  position: relative;
-  min-height: 220px;
-  overflow: visible;
-}
-
-/* Columna a la izquierda */
-.catalogo-animado .product-list {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;   /* alineado a la izquierda */
-  gap: 16px;
-}
-
-/* Cuadrado base */
-.square {
-  width: 140px;
-  height: 140px;
-  /*background-color: #d1b08a;*/
-  /* border-radius: 16px;*/
-  cursor: pointer;
-  transition: box-shadow 0.3s ease;
-}
-
-/* Imagen de producto */
-.product-square {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* Pequeño hover para indicar que es clicable */
-.product-square:hover {
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-}
-
-.product-square.focused {
-  position: relative;
-  z-index: 1000;
-}
 
 
 /* --------------PÁGINA ABOUT US---------------------- */
