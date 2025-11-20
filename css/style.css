@@ -501,20 +501,20 @@ body {
 
 #mapa-collage {
   width: 99vw;
-  height: 100vh;                /* Ocupa TODA la pantalla */
+  height: 100vh;               
   background-image: url('../img/map.png');
-  background-size: cover;       /* La imagen cubre toda la pantalla */
+  background-size: cover;      
   background-position: center;
   background-repeat: no-repeat;
 
   position: relative;
-  overflow: hidden;             /* Las fotos NO pueden salirse */
+  overflow: hidden;             
   margin-top: 25vh;
-  margin-bottom: 35vh;
+  margin-bottom: 5vh;
 
 }
 
-/* ELEMENTOS SOBRE EL MAPA */
+/* TOOLTIP SUPERPUESTO SOBRE LA IMAGEN */
 .map-item {
   position: absolute;
   width: 210px;
@@ -522,20 +522,77 @@ body {
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+/* Imagen dentro de cada item */
+.map-item img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Hover con un pelín de zoom */
 .map-item:hover {
-  opacity: 0.85;
-  transform: scale(1.15);
+  opacity: 0.98;
+  transform: scale(1.03);
 }
 
 .map-item:active {
   cursor: grabbing;
 }
-/* HEAD */
 
-.map-item:hover {
-  opacity: 0.85;
-  transform: scale(1.25);   /* ← se agranda más */
+/* CAPA SUPERPUESTA */
+.map-tooltip {
+  position: absolute;
+  inset: 0;                          /* ocupa toda la imagen */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding: 12px;
+  border-radius: 8px;
+
+  background: rgba(239, 216, 178, 0.9);
+color: #333;
+
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
 }
+
+/* Título y texto */
+.map-tooltip h3 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin: 0 0 4px;
+}
+
+.map-tooltip p {
+  font-size: 0.7rem;
+  margin: 0 0 8px;
+}
+
+/* Botón dentro del overlay */
+.map-btn {
+  display: inline-block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: none;
+  background-color: #a4312b;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Mostrar overlay al hacer hover */
+.map-item:hover .map-tooltip {
+  opacity: 1;
+}
+
 
 /* NEWSLETTER - HOME */
 .newsletter-section {
@@ -546,7 +603,7 @@ body {
   justify-content: center;
   text-align: center;
   overflow: hidden;
-  padding: 40px 0;          /* sin padding lateral para que llegue al borde */
+  padding: 40px 0;        
 }
 
 .newsletter-bg {
@@ -554,8 +611,8 @@ body {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;        /* ocupa todo el ancho y alto */
-  object-position: center;  /* puedes poner center bottom si prefieres */
+  object-fit: cover;        
+  object-position: center;  
   pointer-events: none;
   z-index: 0;
 }
@@ -565,7 +622,7 @@ body {
   position: relative;
   z-index: 1;
   max-width: 480px;
-  top: -6vh;                      /* lo subimos un poco al hueco entre jarrones */
+  top: -6vh;                      
 }
 
 /* Tipografía */
