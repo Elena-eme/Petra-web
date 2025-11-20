@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PETRA - Home</title>
 
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+
   
 
   <!-- Bootstrap -->
@@ -133,19 +137,42 @@
       <div class="grid-item color4" data-category="Accesorios"></div>
     </section>
 
-    <section id="mapa-collage">
-  <div id="mapa-container">
-    <img src="img/map.png" id="mapa-fondo" alt="Mapa Petra">
-    
-    <!-- Elementos encima del mapa -->
+   <section id="mapa-collage">
     <img src="https://i.pinimg.com/1200x/d9/c9/64/d9c964b7d3248a3e61f0ecf17a1ba205.jpg" class="map-item" id="item1">
     <img src="https://i.pinimg.com/1200x/a3/f8/3f/a3f83fa0ad8bfda8ec8cb8547176ceba.jpg" class="map-item" id="item2">
     <img src="https://i.pinimg.com/736x/8f/fa/4a/8ffa4a7f369849ff66d8eb1c744beddf.jpg" class="map-item" id="item3">
-    <img src="img/mueble4.png" class="map-item" id="item4">
-  </div>
+    <img src="https://i.pinimg.com/1200x/05/e0/e8/05e0e8d507da6c9173cc9367eab3ec9e.jpg" class="map-item" id="item4">
+    <img src="https://i.pinimg.com/1200x/3e/f6/2d/3ef62de140865fcd767da2981a9fc9e1.jpg" class="map-item" id="item5">
+    <img src="https://i.pinimg.com/1200x/20/7a/04/207a04658d1623de42b77356168eedbe.jpg" class="map-item" id="item6">
 </section>
 
   </div>
+
+  <!-- SECCIÓN NEWSLETTER -->
+  <section id="newsletter" class="newsletter-section">
+    <div class="newsletter-content">
+      <h1>SUBSCRÍBETE A NUESTRA NEWSLETTER</h1>
+      <p>Haz click para registrarte y tener acceso a descuentos exclusivos</p>
+      <button id="newsletter-open-modal" class="cta-btn">registrate</button>
+    </div>
+
+  <!-- POP UP / MODAL -->
+    <div id="newsletter-modal" class="newsletter-modal">
+      <div class="newsletter-modal-content">
+        <button id="newsletter-close-modal" class="newsletter-modal-close">&times;</button>
+        <h2>Newsletter</h2>
+        <p>Introduce tus datos para suscribirte.</p>
+        <form>
+          <label>
+            Email:
+            <input type="email" required />
+          </label>
+          <button type="submit" class="cta-btn">enviar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

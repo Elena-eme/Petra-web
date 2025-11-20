@@ -40,10 +40,12 @@ $(document).ready(function() {
 
   // Posiciones fijas sobre el mapa
   const posiciones = {
-    item1: { top: 50, left: 120 },
-    item2: { top: 280, left: 400 },
-    item3: { top: 500, left: 150 },
-    item4: { top: 360, left: 700 }
+   item1: { top: "12%", left: "10%" },
+    item2: { top: "18%", left: "78%" },
+    item3: { top: "55%", left: "18%" },
+    item4: { top: "60%", left: "70%" },
+    item5: { top: "10%", left: "50%" },
+    item6: { top: "50%", left: "38%" }
   };
 
   // Aplicar posiciones iniciales
@@ -63,4 +65,25 @@ $(document).ready(function() {
 });
 
 
- 
+
+//NEWSLETTER - HOME
+const newsletterOpenBtn = document.getElementById("newsletter-open-modal");
+const newsletterCloseBtn = document.getElementById("newsletter-close-modal");
+const newsletterModal = document.getElementById("newsletter-modal");
+
+if (newsletterOpenBtn && newsletterCloseBtn && newsletterModal) {
+  newsletterOpenBtn.addEventListener("click", () => {
+    newsletterModal.classList.add("show");
+  });
+
+  newsletterCloseBtn.addEventListener("click", () => {
+    newsletterModal.classList.remove("show");
+  });
+
+  // Cerrar al hacer click fuera del cuadro
+  newsletterModal.addEventListener("click", (e) => {
+    if (e.target === newsletterModal) {
+      newsletterModal.classList.remove("show");
+    }
+  });
+}
