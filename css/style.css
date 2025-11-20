@@ -676,3 +676,141 @@ body {
   background-color: #ff5e4d;
   transform: translateY(-3px);
 }
+
+/* PRODUCTO PÁGINA */
+
+/* ===== LAYOUT ESTILO ALPHAWOOD – CATALOGO ===== */
+
+.catalogo-animado {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 48px;
+  padding: 60px 10vw;
+  min-height: 70vh;
+}
+
+/* Columna izquierda */
+.catalogo-left {
+  flex: 0 0 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Títulos tipo "Warm / Armchair" */
+.catalogo-titulos {
+  margin-bottom: 24px;
+}
+
+.catalogo-nombre {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.catalogo-tipo {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  margin: 6px 0 0;
+}
+
+/* Lista de miniaturas (usa la animación actual de .product-square) */
+.product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin: 24px 0;
+}
+
+.square {
+  width: 130px;
+  height: 130px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Bloque de información bajo las miniaturas */
+.catalogo-info {
+  font-size: 0.8rem;
+  max-width: 260px;
+}
+
+.info-titulo {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 2px;
+}
+
+.info-texto {
+  margin: 0;
+}
+
+/* Línea vertical central */
+.catalogo-linea {
+  align-self: center;
+  width: 1px;
+  height: 80%;
+  background-color: rgb(0, 0, 0);
+}
+
+/* Columna derecha con la imagen grande */
+.catalogo-right {
+  flex: 0 0 55%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.catalogo-hero-img {
+  max-width: 100%;
+  max-height: 800px;
+  object-fit: contain;
+}
+.catalogo-linea {
+  align-self: stretch;              /* ocupa toda la altura del contenedor */
+  width: 2px;                       /* un poco más ancha */
+  background-color: #000000;        /* rojo PETRA para que destaque */
+  opacity: 0.9;
+}
+
+
+
+/* Responsive: en tablet/móvil se apila todo */
+@media (max-width: 992px) {
+  .catalogo-animado {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 24px;
+  }
+
+  .catalogo-left,
+  .catalogo-right {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+  .catalogo-linea {
+    width: 60%;
+    height: 1px;
+    margin: 24px 0;
+  }
+
+  .product-list {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .square {
+    width: 90px;
+    height: 90px;
+  }
+
+  .catalogo-right {
+    justify-content: center;
+  }
+}
