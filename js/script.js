@@ -176,7 +176,18 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+// FOOTER REVEAL
+const scrollTopBtn = document.getElementById("scroll-top-btn");
 
+// <<<<<<< HEAD
+if (scrollTopBtn) {
+  scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+}
 
 // BOTÓN CESTA FLOTANTE
 document.addEventListener('DOMContentLoaded', function () {
