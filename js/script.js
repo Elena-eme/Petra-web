@@ -106,7 +106,10 @@ document.addEventListener('DOMContentLoaded', function() {
   if (typeof anime === 'undefined') return;
 
   const squares = document.querySelectorAll('.product-square');
-  if (!squares.length) return; // si no hay cuadrados, no hace nada
+  if (!squares.length) return;
+
+  const container = document.querySelector('.catalogo-animado');
+  if (!container) return;
 
   let activeSquare = null;
 
@@ -145,21 +148,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
       }
 
-      // Calculamos el centro de la pantalla y movemos el clicado
+      // Calculamos el centro del cuadrado y del contenedor de catálogo
       const rect = square.getBoundingClientRect();
-      const viewportWidth = window.innerWidth;
-      const viewportHeight = window.innerHeight;
+      const containerRect = container.getBoundingClientRect();
 
       const squareCenterX = rect.left + rect.width / 2;
       const squareCenterY = rect.top + rect.height / 2;
 
-      // Más hacia la izquierda: 30% del ancho de la ventana
-      const targetX = viewportWidth * 0.30; 
-      const targetY = viewportHeight / 2;
+      // Punto de destino DENTRO del contenedor (25% ancho, centro vertical)
+      const targetX = containerRect.left + containerRect.width * 0.25;
+      const targetY = containerRect.top + containerRect.height * 0.5;
 
       const translateX = targetX - squareCenterX;
       const translateY = targetY - squareCenterY;
-
 
       square.classList.add('focused');
       activeSquare = square;
@@ -168,13 +169,14 @@ document.addEventListener('DOMContentLoaded', function() {
         targets: square,
         translateX: translateX,
         translateY: translateY,
-        scale: 2,                  // tamaño al ampliarse
+        scale: 1.8,              // un poco menos de 2 para que no se vea tan “basto”
         duration: 800,
         easing: 'easeOutBack'
       });
     });
   });
 });
+
 
 // FOOTER REVEAL
 const scrollTopBtn = document.getElementById("scroll-top-btn");

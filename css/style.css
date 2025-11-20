@@ -1156,6 +1156,13 @@ body {
 }
 
 /* Lista de miniaturas (usa la animación actual de .product-square) */
+.product-square {
+  background-size: contain;      /* que quepa entera */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
 .product-list {
   display: flex;
   flex-direction: column;
@@ -1186,13 +1193,7 @@ body {
   margin: 0;
 }
 
-/* Línea vertical central */
-.catalogo-linea {
-  align-self: center;
-  width: 1px;
-  height: 80%;
-  background-color: rgb(0, 0, 0);
-}
+
 
 /* Columna derecha con la imagen grande */
 .catalogo-right {
@@ -1207,12 +1208,7 @@ body {
   max-height: 800px;
   object-fit: contain;
 }
-.catalogo-linea {
-  align-self: stretch;              /* ocupa toda la altura del contenedor */
-  width: 2px;                       /* un poco más ancha */
-  background-color: #000000;        /* rojo PETRA para que destaque */
-  opacity: 0.9;
-}
+
 
 
 

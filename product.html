@@ -9,7 +9,7 @@
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
 
   <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
   
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -24,7 +24,6 @@
   <div id="main-content" class="hidden">
 
     <!-- NAVBAR -->
-    <!-- Navbar desktop  -->
     <nav class="navbar navbar-light bg-sand d-none d-md-block">
       <div class="container nav-container">
         <a href="index.html" class="nav-link text-dark fw-semibold">Home</a>
@@ -40,13 +39,10 @@
     <!-- Navbar mobile/table -->
     <nav class="navbar navbar-light bg-sand d-flex d-md-none">
       <div class="container-fluid d-flex justify-content-between align-items-center px-3">
-
-        <!-- LOGO -->
         <a href="index.html" class="navbar-brand d-flex align-items-center">
           <img src="img/logo petra.png" alt="PETRA Logo" class="logo logo-mobile">
         </a>
 
-        <!-- BOTÓN HAMBURGUESA -->
         <button class="navbar-toggler ms-auto" type="button" 
                 data-bs-toggle="offcanvas" 
                 data-bs-target="#sideMenu" 
@@ -54,7 +50,6 @@
                 aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-
       </div>
     </nav>
 
@@ -64,7 +59,6 @@
         <h5 class="offcanvas-title">Menú</h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
       </div>
-
       <div class="offcanvas-body">
         <ul class="navbar-nav">
           <li class="nav-item mb-2">
@@ -80,61 +74,55 @@
       </div>
     </div>
 
-   
+    <!-- AQUÍ VA TU SECCIÓN DEL PRODUCTO -->
+    <section class="catalogo-animado my-5">
+      <!-- COLUMNA IZQUIERDA: texto + miniaturas con animación -->
+      <div class="catalogo-left">
+        <div class="catalogo-titulos">
+          <h2 class="catalogo-nombre">Horus</h2>
+          <p class="catalogo-tipo">Armchair</p>
+        </div>
 
-</section>
+        <div class="product-list">
+          <div class="square product-square"
+               style="background-image: url('img/sofa-orange-front.png');"></div>
 
-<div class="cart-fab-title">CESTA</div>
-  <!-- BOTÓN CESTA FLOTANTE -->
+          <div class="square product-square"
+               style="background-image: url('img/sofa-orange-left.png');"></div>
+
+          <div class="square product-square"
+               style="background-image: url('img/sofa-orange-back.png');"></div>
+        </div>
+
+        <div class="catalogo-info">
+          <p class="info-titulo">Materiales</p>
+          <p class="info-texto">madera, lino, latón</p>
+
+          <p class="info-titulo mt-3">Medidas</p>
+          <p class="info-texto">H 1050 mm, W 870 mm, D 990 mm</p>
+        </div>
+      </div>
+
+      <!-- LÍNEA VERTICAL -->
+      <div class="catalogo-linea"></div>
+
+      <!-- COLUMNA DERECHA: imagen grande -->
+      <div class="catalogo-right">
+        <img src="img/sofa-orange.png" alt="Producto destacado" class="catalogo-hero-img">
+      </div>
+    </section>
+
+  </div> <!-- cierra #main-content -->
+
+  <!-- TEXTO CESTA + BOTÓN FLOTANTE (fuera de #main-content, pero dentro del body) -->
+  <div class="cart-fab-title">CESTA</div>
+
   <button id="cart-fab" class="cart-fab" type="button">
     <img src="https://i.pinimg.com/1200x/3b/51/db/3b51db92af89406404089f4aa7611f87.jpg" alt="Cesta" class="cart-fab-icon">
     <span class="cart-fab-label">añadir</span>
   </button>
-</body>
-</html>
 
-
-<section class="catalogo-animado my-5">
-  <!-- COLUMNA IZQUIERDA: texto + miniaturas con animación -->
-  <div class="catalogo-left">
-    <div class="catalogo-titulos">
-      <h2 class="catalogo-nombre">Horus</h2>
-      <p class="catalogo-tipo">Armchair</p>
-    </div>
-
-    <div class="product-list">
-      <div class="square product-square"
-           style="background-image: url('img/sofa-orange-front.png');"></div>
-
-      <div class="square product-square"
-           style="background-image: url('img/sofa-orange-left.png');"></div>
-
-      <div class="square product-square"
-           style="background-image: url('img/sofa-orange-back.png');"></div>
-    </div>
-
-    <div class="catalogo-info">
-      <p class="info-titulo">Materiales</p>
-      <p class="info-texto">madera, lino, latón</p>
-
-      <p class="info-titulo mt-3">Medidas</p>
-      <p class="info-texto">H 1050 mm, W 870 mm, D 990 mm</p>
-    </div>
-  </div>
-
-  <!-- LÍNEA VERTICAL -->
-  <div class="catalogo-linea"></div>
-
-  <!-- COLUMNA DERECHA: imagen grande -->
-  <div class="catalogo-right">
-    <img src="img/sofa-orange.png" alt="Producto destacado" class="catalogo-hero-img">
-  </div>
-</section>
-
-
-    
-  </div>
-
+  <!-- SCRIPTS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
