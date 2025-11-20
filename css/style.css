@@ -9,6 +9,8 @@ body {
   background-color: #efd8b2;
 }
 
+
+
 /* ===== NAVBAR ===== */
 .nav-container {
   display: flex;
@@ -274,6 +276,54 @@ body {
 }
 
 /* ===== GRID ===== */
+
+/* Contenedor centrado */
+.catalogo {
+  display: flex;
+  justify-content: center;  /* centro horizontal */
+  align-items: center;      /* centro vertical */
+  height: 10vh;            /* altura completa de la pantalla */
+  text-align: center;
+
+}
+
+/* Estilo del h2 con subrayado animado */
+.catalogo h2 {
+  display: inline-block;       
+  color: #333;
+  font-weight: 300;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Subrayado animado */
+.catalogo h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;               
+  width: 0%;                  
+  height: 3px;                
+  background: linear-gradient(#a4312b);
+  transition: width 0.5s ease, background 0.5s ease;
+}
+
+/* Hover: línea se expande y cambia de color */
+.catalogo h2:hover::after {
+  width: 100%;
+  background: linear-gradient(#a4312b);
+}
+
+/* Hover: color del texto */
+.catalogo h2:hover {
+  color: #a4312b;
+}
+
+
 .grid-layout {
   display: flex;
   flex-wrap: nowrap;
@@ -283,7 +333,7 @@ body {
   overflow: hidden;
   transition: all 1s ease-in-out;
   padding: 40px 140px;
-  margin-top: 140px;      /* MÁS ESPACIO entre carrusel y grid */
+  margin-top: 70px;      /* MÁS ESPACIO entre carrusel y grid */
 }
 
 .grid-item {
