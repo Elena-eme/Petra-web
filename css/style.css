@@ -284,42 +284,36 @@ body {
   }
 }
 
-/* COLLAGE */
+/* ===== COLLAGE – MAPA DE FONDO ===== */
+
 #mapa-collage {
-  width: 100%;
-  display: flex;
-  /* justify-content: center; */
-  margin-top: 120px;
-}
+  width: 99vw;
+  height: 100vh;                /* Ocupa TODA la pantalla */
+  background-image: url('../img/map.png');
+  background-size: cover;       /* La imagen cubre toda la pantalla */
+  background-position: center;
+  background-repeat: no-repeat;
 
-#mapa-container {
   position: relative;
-  width: 90vw;   /* El mapa ocupa casi toda la pantalla */
-  max-width: 1500px; /* Límite opcional */
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow: hidden;             /* Las fotos NO pueden salirse */
+  margin-top: 35vh;
+  margin-bottom: 35vh;
+
 }
 
-#mapa-fondo {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
+/* ELEMENTOS SOBRE EL MAPA */
 .map-item {
   position: absolute;
-  width: 140px;           /* ajusta tamaño */
+  width: 210px;
   cursor: grab;
-  transition: opacity 0.3s ease;
-}
-
-.map-item:active {
-  cursor: grabbing;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .map-item:hover {
   opacity: 0.85;
-  transform: scale(1.25);   /* ← se agranda más */
+  transform: scale(1.15);
+}
+
+.map-item:active {
+  cursor: grabbing;
 }
