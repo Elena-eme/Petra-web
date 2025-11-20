@@ -514,7 +514,7 @@ body {
 
 }
 
-/* ELEMENTOS SOBRE EL MAPA */
+/* TOOLTIP SUPERPUESTO SOBRE LA IMAGEN */
 .map-item {
   position: absolute;
   width: 210px;
@@ -522,20 +522,77 @@ body {
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+/* Imagen dentro de cada item */
+.map-item img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Hover con un pelín de zoom */
 .map-item:hover {
-  opacity: 0.85;
-  transform: scale(1.15);
+  opacity: 0.98;
+  transform: scale(1.03);
 }
 
 .map-item:active {
   cursor: grabbing;
 }
-/* HEAD */
 
-.map-item:hover {
-  opacity: 0.85;
-  transform: scale(1.25);  
+/* CAPA SUPERPUESTA */
+.map-tooltip {
+  position: absolute;
+  inset: 0;                          /* ocupa toda la imagen */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding: 12px;
+  border-radius: 8px;
+
+  background: rgba(239, 216, 178, 0.9);
+color: #333;
+
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
 }
+
+/* Título y texto */
+.map-tooltip h3 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin: 0 0 4px;
+}
+
+.map-tooltip p {
+  font-size: 0.7rem;
+  margin: 0 0 8px;
+}
+
+/* Botón dentro del overlay */
+.map-btn {
+  display: inline-block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: none;
+  background-color: #a4312b;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Mostrar overlay al hacer hover */
+.map-item:hover .map-tooltip {
+  opacity: 1;
+}
+
 
 /* NEWSLETTER - HOME */
 .newsletter-section {
