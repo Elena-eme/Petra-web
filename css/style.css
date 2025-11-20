@@ -284,7 +284,7 @@ body {
   }
 }
 
-
+/* COLLAGE */
 #mapa-collage {
   width: 100%;
   display: flex;
@@ -294,15 +294,17 @@ body {
 
 #mapa-container {
   position: relative;
-  width: 1000px;         /* ajusta a tu mapa */
+  width: 90vw;   /* El mapa ocupa casi toda la pantalla */
+  max-width: 1500px; /* Límite opcional */
   height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #mapa-fondo {
-  
-  width: 210vh;
-  padding-left: 20px;
-
+  width: 100%;
+  height: auto;
   display: block;
 }
 
