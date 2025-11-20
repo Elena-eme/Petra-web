@@ -13,9 +13,11 @@ body {
 .nav-container {
   display: flex;
   align-items: center;
-  padding: 10px 400px;
+  justify-content: center;
+  padding: 10px 400px; 
 }
 
+/* Links del nav desktop */
 .nav-link {
   color: #333;
   text-decoration: none;
@@ -31,12 +33,86 @@ body {
   text-decoration: underline;
 }
 
+/* Logo general */
+.logo {
+  height: 100px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* Logo en móvil un poco más pequeño */
+.logo-mobile {
+  height: 70px;
+}
+
+/* Botón hamburguesa */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* Ocultar nav desktop en tablet/móvil */
+@media (max-width: 768px) {
+  .nav-desktop {
+    display: none !important;
+  }
+  .nav-container {
+    justify-content: center;
+  }
+}
+
+/* MÓVIL → logo a la IZQUIERDA */
+@media (max-width: 575px) {
+  .navbar.d-md-none .container-fluid {
+    justify-content: space-between; 
+  }
+}
+
+/* TABLET → logo CENTRADO */
+@media (min-width: 576px) and (max-width: 767px) {
+  .navbar.d-md-none .container-fluid {
+    justify-content: center; 
+    position: relative;
+  }
+
+  .navbar.d-md-none .navbar-toggler {
+    position: absolute;
+    right: 15px;
+  }
+}
+
+
+/* MENU LATERAL */
+.offcanvas-end {
+  width: 270px;
+  background-color: #efd8b2 !important; 
+}
+
+.offcanvas .nav-link {
+  color: #333;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.offcanvas .nav-link:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+
 
 /* ===== PRELOADER ===== */
 #preloader {
   position: fixed;
   inset: 0;
-  background-color: #efd8b2; /* fondo arena */
+  background-color: #efd8b2; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,24 +155,21 @@ body {
 }
 
 /* SCROLL BAR */
-/* ===== Scrollbar completo ===== */
 ::-webkit-scrollbar {
-  width: 7px;         /* ancho de la barra */
+  width: 7px;        
 }
 
-/* ===== Fondo del track ===== */
 ::-webkit-scrollbar-track {
-  background: #efd8b2; /* color de fondo */
+  background: #efd8b2; 
 }
 
-/* ===== Thumb con imagen ===== */
 ::-webkit-scrollbar-thumb {
   background: url("../img/TEXTURE.jpg") no-repeat center;
-  background-size: cover; /* ajusta la imagen */
+  background-size: cover; 
   border-radius: 10px;
 }
 
-/* Hover del thumb */
+/* Hover */
 ::-webkit-scrollbar-thumb:hover {
   filter: brightness(1.1);
 }
@@ -106,27 +179,25 @@ body {
 /* Contenedor principal del carrusel */
 #carouselExampleIndicators {
   width: 100%;
-  height: 70vh;              /* 70% de la altura de la ventana */
-  max-height: 800px;         /* Opcional: límite para pantallas muy grandes */
+  height: 70vh;            
+  max-height: 800px;        
   position: relative;
   overflow: hidden;
 }
 
-/* Aseguramos que todo dentro ocupe el 100% de la altura del carrusel */
 #carouselExampleIndicators .carousel-inner,
 #carouselExampleIndicators .carousel-item {
   height: 100%;
 }
 
-/* Imágenes del carrusel */
 #carouselExampleIndicators .carousel-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;         /* Recorta la imagen manteniendo proporción */
+  object-fit: cover;         
   display: block;
 }
 
-/* Indicadores (los puntitos de abajo) */
+/* Indicadores (puntitos de abajo) */
 #carouselExampleIndicators .carousel-indicators [data-bs-target] {
   width: 10px;
   height: 10px;
@@ -188,7 +259,7 @@ body {
 @media (max-width: 768px) {
   #carouselExampleIndicators {
     height: 50vh;
-    border-radius: 0;        /* Si quieres que en móvil sea full-width sin bordes redondeados */
+    border-radius: 0;       
   }
 
   .carousel-caption-custom {

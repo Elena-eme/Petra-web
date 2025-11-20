@@ -23,18 +23,68 @@
   <!-- ===== CONTENIDO PRINCIPAL ===== -->
   <div id="main-content" class="hidden">
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-light bg-sand">
-      <div class="container nav-container">
-        <a href="decoration.html" class="nav-link text-dark fw-semibold">Decoration</a>
-        <a href="index.html" class="navbar-brand">
-          <img src="img/logo petra.png" alt="PETRA Logo" class="logo">
-        </a>
-        <a href="furniture.html" class="nav-link text-dark fw-semibold">Furniture</a>
-      </div>
-    </nav>
+    <!-- NAVBAR -->
+    <!-- Navbar desktop  -->
+<nav class="navbar navbar-light bg-sand d-none d-md-block">
+  <div class="container nav-container">
+    <a href="decoration.html" class="nav-link text-dark fw-semibold">Decoration</a>
 
-    <!-- ===== CARRUSEL CAMPAÑA ===== -->
+    <a href="index.html" class="navbar-brand">
+      <img src="img/logo petra.png" alt="PETRA Logo" class="logo">
+    </a>
+
+    <a href="furniture.html" class="nav-link text-dark fw-semibold">Furniture</a>
+  </div>
+</nav>
+
+<!-- Navbar mobile/table -->
+<nav class="navbar navbar-light bg-sand d-flex d-md-none">
+  <div class="container-fluid d-flex justify-content-between align-items-center px-3">
+
+    <!-- LOGO -->
+    <a href="index.html" class="navbar-brand d-flex align-items-center">
+      <img src="img/logo petra.png" alt="PETRA Logo" class="logo logo-mobile">
+    </a>
+
+    <!-- BOTÓN HAMBURGUESA -->
+    <button class="navbar-toggler ms-auto" type="button" 
+            data-bs-toggle="offcanvas" 
+            data-bs-target="#sideMenu" 
+            aria-controls="sideMenu" 
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+  </div>
+</nav>
+
+<!-- MENÚ LATERAL -->
+<div class="offcanvas offcanvas-end bg-sand" tabindex="-1" id="sideMenu">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">Menú</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+
+  <div class="offcanvas-body">
+    <ul class="navbar-nav">
+      <li class="nav-item mb-2">
+        <a href="index.html" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item mb-2">
+        <a href="decoration.html" class="nav-link">Decoration</a>
+      </li>
+      <li class="nav-item mb-2">
+        <a href="furniture.html" class="nav-link">Furniture</a>
+      </li>
+      <li class="nav-item mb-2">
+        <a href="catalogo.html" class="nav-link">Catálogo</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+    <!-- CARRUSEL CAMPAÑA -->
     <div id="carouselExampleIndicators" class="carousel slide">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -71,7 +121,7 @@
       </button>
     </div>
 
-    <!-- ===== GRID PRINCIPAL ===== -->
+    <!-- GRID PRINCIPAL -->
     <section id="grid" class="container-fluid grid-layout">
       <div class="grid-item color1" data-category=""></div>
       <div class="grid-item img1" data-category="Sofás"></div>
