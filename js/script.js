@@ -153,11 +153,13 @@ document.addEventListener('DOMContentLoaded', function() {
       const squareCenterX = rect.left + rect.width / 2;
       const squareCenterY = rect.top + rect.height / 2;
 
-      const targetX = viewportWidth / 2;
+      // Más hacia la izquierda: 30% del ancho de la ventana
+      const targetX = viewportWidth * 0.30; 
       const targetY = viewportHeight / 2;
 
       const translateX = targetX - squareCenterX;
       const translateY = targetY - squareCenterY;
+
 
       square.classList.add('focused');
       activeSquare = square;
@@ -177,6 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // FOOTER REVEAL
 const scrollTopBtn = document.getElementById("scroll-top-btn");
 
+// <<<<<<< HEAD
 if (scrollTopBtn) {
   scrollTopBtn.addEventListener("click", () => {
     window.scrollTo({
@@ -185,3 +188,15 @@ if (scrollTopBtn) {
     });
   });
 }
+
+// BOTÓN CESTA FLOTANTE
+document.addEventListener('DOMContentLoaded', function () {
+  const cartFab = document.getElementById('cart-fab');
+
+  if (cartFab) {
+    cartFab.addEventListener('click', function () {
+      alert('Producto añadido correctamente a la cesta');
+      // Más adelante aquí puedes sustituir el alert por lógica real de carrito :)
+    });
+  }
+});
