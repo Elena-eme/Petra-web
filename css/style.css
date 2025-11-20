@@ -398,7 +398,7 @@ body {
 /* NEWSLETTER - HOME */
 .newsletter-section {
   position: relative;
-  min-height: 100vh; /* ocupa toda la altura de la ventana */
+  min-height: 100vh;                
   display: flex;
   align-items: center;
   justify-content: center;
@@ -407,9 +407,9 @@ body {
   background-color: #e7e5df;
   background-image: url("../img/img_jarrones.png");
   background-repeat: no-repeat;
+
+  background-size: contain;         
   background-position: center bottom;
-  background-size: contain;         /* jarrones grandes al fondo */
-  background-attachment: fixed;     /* efecto "fijo" al hacer scroll */
 }
 
 .newsletter-content {
@@ -450,7 +450,7 @@ body {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
-  display: none;               /* oculto por defecto */
+  display: none;             
   align-items: center;
   justify-content: center;
   z-index: 1000;
