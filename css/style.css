@@ -398,25 +398,36 @@ body {
 /* NEWSLETTER - HOME */
 .newsletter-section {
   position: relative;
-  min-height: 100vh;                
+  min-height: 200vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-
   background-color: #e7e5df;
-  background-image: url("../img/img_jarrones.png");
-  background-repeat: no-repeat;
-
-  background-size: contain;         
-  background-position: center bottom;
+  overflow: hidden;
+  padding: 40px 0;          /* sin padding lateral para que llegue al borde */
 }
 
+.newsletter-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* ocupa todo el ancho y alto */
+  object-position: center;  /* puedes poner center bottom si prefieres */
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Contenido (texto + botón) centrado por encima de la imagen */
 .newsletter-content {
+  position: relative;
+  z-index: 1;
   max-width: 480px;
+  top: -6vh;                      /* lo subimos un poco al hueco entre jarrones */
 }
 
-/* texto */
+/* Tipografía */
 .newsletter-content h1 {
   font-size: 12px;
   letter-spacing: 0.12em;
@@ -429,7 +440,7 @@ body {
   margin-bottom: 24px;
 }
 
-/* botón rojo */
+/* Botón rojo */
 .cta-btn {
   background-color: #c44a3b;
   color: #ffffff;
@@ -444,19 +455,21 @@ body {
   opacity: 0.9;
 }
 
-/* --------- MODAL SOLO NEWSLETTER ---------- */
+/* =========================================
+   MODAL NEWSLETTER
+   ========================================= */
 
 .newsletter-modal {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
-  display: none;             
+  display: none;                  /* oculto por defecto */
   align-items: center;
   justify-content: center;
   z-index: 1000;
 }
 
-.newsletter-modal.show {
+.newsletter-modal.is-open {
   display: flex;
 }
 
@@ -489,6 +502,7 @@ body {
   border: 1px solid #ccc;
 }
 
+/* Botón de cerrar (X) */
 .newsletter-modal-close {
   position: absolute;
   top: 8px;

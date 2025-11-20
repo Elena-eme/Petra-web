@@ -169,29 +169,57 @@
 
   <!-- SECCIÓN NEWSLETTER -->
   <section id="newsletter" class="newsletter-section">
+    <img
+      src="img/img_jarrones.png"
+      alt="Jarrones verdes"
+      class="newsletter-bg"
+    />
+
     <div class="newsletter-content">
       <h1>SUBSCRÍBETE A NUESTRA NEWSLETTER</h1>
       <p>Haz click para registrarte y tener acceso a descuentos exclusivos</p>
-      <button id="newsletter-open-modal" class="cta-btn">registrate</button>
+      <button
+        type="button"
+        id="newsletter-open-modal"
+        class="cta-btn"
+      >
+        registrate
+      </button>
     </div>
 
-  <!-- POP UP / MODAL -->
-    <div id="newsletter-modal" class="newsletter-modal">
+    <!-- POP UP / MODAL -->
+    <div
+      id="newsletter-modal"
+      class="newsletter-modal"
+      aria-hidden="true"
+    >
       <div class="newsletter-modal-content">
-        <button id="newsletter-close-modal" class="newsletter-modal-close">&times;</button>
+        <button
+          type="button"
+          id="newsletter-close-modal"
+          class="newsletter-modal-close"
+          aria-label="Cerrar"
+        >
+          &times;
+        </button>
+
         <h2>Newsletter</h2>
         <p>Introduce tus datos para suscribirte.</p>
+
         <form>
-          <label>
-            Email:
-            <input type="email" required />
-          </label>
-          <button type="submit" class="cta-btn">enviar</button>
+          <label for="newsletter-email">Email:</label>
+          <input
+            id="newsletter-email"
+            type="email"
+            required
+          />
+          <button type="submit" class="cta-btn">
+            enviar
+          </button>
         </form>
       </div>
     </div>
   </section>
-
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
