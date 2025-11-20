@@ -582,3 +582,51 @@ body {
 .kpi-label {
   font-size: 14px;
 }
+
+/* ABOUT US */
+/* Sección fullscreen */
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;  /* ocupa toda la pantalla */
+  overflow: hidden;
+}
+
+/* Video de fondo */
+.video-section .video-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* cubre toda la pantalla sin deformar */
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* Overlay para contenido encima del video */
+.video-section .video-overlay {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Botón centrado */
+.video-section .cta-btn {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  background-color: #c44a3b;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.video-section .cta-btn:hover {
+  background-color: #ff5e4d;
+  transform: translateY(-3px);
+}
