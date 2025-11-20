@@ -501,14 +501,14 @@ body {
 
 #mapa-collage {
   width: 99vw;
-  height: 100vh;                /* Ocupa TODA la pantalla */
+  height: 100vh;               
   background-image: url('../img/map.png');
-  background-size: cover;       /* La imagen cubre toda la pantalla */
+  background-size: cover;      
   background-position: center;
   background-repeat: no-repeat;
 
   position: relative;
-  overflow: hidden;             /* Las fotos NO pueden salirse */
+  overflow: hidden;             
   margin-top: 25vh;
   margin-bottom: 5vh;
 
@@ -534,7 +534,7 @@ body {
 
 .map-item:hover {
   opacity: 0.85;
-  transform: scale(1.25);   /* ← se agranda más */
+  transform: scale(1.25);  
 }
 
 /* NEWSLETTER - HOME */
@@ -546,7 +546,7 @@ body {
   justify-content: center;
   text-align: center;
   overflow: hidden;
-  padding: 40px 0;          /* sin padding lateral para que llegue al borde */
+  padding: 40px 0;        
 }
 
 .newsletter-bg {
@@ -554,8 +554,8 @@ body {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;        /* ocupa todo el ancho y alto */
-  object-position: center;  /* puedes poner center bottom si prefieres */
+  object-fit: cover;        
+  object-position: center;  
   pointer-events: none;
   z-index: 0;
 }
@@ -565,7 +565,7 @@ body {
   position: relative;
   z-index: 1;
   max-width: 480px;
-  top: -6vh;                      /* lo subimos un poco al hueco entre jarrones */
+  top: -6vh;                      
 }
 
 /* Tipografía */
