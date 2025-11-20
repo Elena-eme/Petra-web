@@ -403,7 +403,6 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: #e7e5df;
   overflow: hidden;
   padding: 40px 0;          /* sin padding lateral para que llegue al borde */
 }
