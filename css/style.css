@@ -582,3 +582,96 @@ body {
 .kpi-label {
   font-size: 14px;
 }
+
+
+/*PAGINA CATALOGO*/
+/*Animación catalogo*/
+.catalogo-animado {
+  position: relative;
+  min-height: 220px;
+  overflow: visible;
+}
+
+/* Columna a la izquierda */
+.catalogo-animado .product-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;   /* alineado a la izquierda */
+  gap: 16px;
+}
+
+/* Cuadrado base */
+.square {
+  width: 140px;
+  height: 140px;
+  /*background-color: #d1b08a;*/
+  /* border-radius: 16px;*/
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Imagen de producto */
+.product-square {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Pequeño hover para indicar que es clicable */
+.product-square:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.product-square.focused {
+  position: relative;
+  z-index: 1000;
+}
+
+
+/* ABOUT US */
+/* Sección fullscreen */
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;  /* ocupa toda la pantalla */
+  overflow: hidden;
+}
+
+/* Video de fondo */
+.video-section .video-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* cubre toda la pantalla sin deformar */
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* Overlay para contenido encima del video */
+.video-section .video-overlay {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Botón centrado */
+.video-section .cta-btn {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  background-color: #c44a3b;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.video-section .cta-btn:hover {
+  background-color: #ff5e4d;
+  transform: translateY(-3px);
+}

@@ -100,3 +100,78 @@ if (newsletterOpenBtn && newsletterCloseBtn && newsletterModal) {
     }
   });
 }
+
+// PRUEBA ANIMACIÓN CATALOGO
+document.addEventListener('DOMContentLoaded', function() {
+  if (typeof anime === 'undefined') return;
+
+  const squares = document.querySelectorAll('.product-square');
+  if (!squares.length) return; // si no hay cuadrados, no hace nada
+
+  let activeSquare = null;
+
+  squares.forEach(square => {
+    square.addEventListener('click', () => {
+
+      // Si ya está activo, lo devolvemos a su sitio
+      if (activeSquare === square) {
+        anime({
+          targets: square,
+          translateX: 0,
+          translateY: 0,
+          scale: 1,
+          duration: 600,
+          easing: 'easeOutQuad',
+          complete: () => {
+            square.classList.remove('focused');
+            activeSquare = null;
+          }
+        });
+        return;
+      }
+
+      // Si había otro activo, lo reseteamos
+      if (activeSquare) {
+        anime({
+          targets: activeSquare,
+          translateX: 0,
+          translateY: 0,
+          scale: 1,
+          duration: 500,
+          easing: 'easeOutQuad',
+          complete: () => {
+            activeSquare.classList.remove('focused');
+          }
+        });
+      }
+
+      // Calculamos el centro de la pantalla y movemos el clicado
+      const rect = square.getBoundingClientRect();
+      const viewportWidth = window.innerWidth;
+      const viewportHeight = window.innerHeight;
+
+      const squareCenterX = rect.left + rect.width / 2;
+      const squareCenterY = rect.top + rect.height / 2;
+
+      const targetX = viewportWidth / 2;
+      const targetY = viewportHeight / 2;
+
+      const translateX = targetX - squareCenterX;
+      const translateY = targetY - squareCenterY;
+
+      square.classList.add('focused');
+      activeSquare = square;
+
+      anime({
+        targets: square,
+        translateX: translateX,
+        translateY: translateY,
+        scale: 2,                  // tamaño al ampliarse
+        duration: 800,
+        easing: 'easeOutBack'
+      });
+    });
+  });
+});
+
+
