@@ -200,61 +200,66 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // CARRUSEL CATALOGO-SECCIONES
+// CARRUSEL CATALOGO-SECCIONES
 document.addEventListener('DOMContentLoaded', function() {
-  const track = document.querySelector('.secciones-track');
-  const viewport = document.querySelector('.secciones-viewport');
-  const items = track ? track.querySelectorAll('.seccion-item') : [];
-  const prevBtn = document.querySelector('.secciones-arrow-left');
-  const nextBtn = document.querySelector('.secciones-arrow-right');
-  const progressBar = document.querySelector('.secciones-progress-bar');
 
-  if (!track || !viewport || !items.length || !prevBtn || !nextBtn || !progressBar) return;
+  document.querySelectorAll('.catalogo-secciones').forEach(seccion => {
 
-  let currentIndex = 0;
+    const track = seccion.querySelector('.secciones-track');
+    const viewport = seccion.querySelector('.secciones-viewport');
+    const items = track ? track.querySelectorAll('.seccion-item') : [];
+    const prevBtn = seccion.querySelector('.secciones-arrow-left');
+    const nextBtn = seccion.querySelector('.secciones-arrow-right');
+    const progressBar = seccion.querySelector('.secciones-progress-bar');
 
-  function getVisibleCount() {
-    const itemWidth = items[0].getBoundingClientRect().width;
-    const viewportWidth = viewport.getBoundingClientRect().width;
-    const count = Math.round(viewportWidth / itemWidth);
-    return Math.max(1, count);
-  }
+    if (!track || !viewport || !items.length || !prevBtn || !nextBtn || !progressBar) return;
 
-  function updateCarousel() {
-    const itemWidth = items[0].getBoundingClientRect().width + 40; // gap = 40px
-    const translateX = -currentIndex * itemWidth;
-    track.style.transform = `translateX(${translateX}px)`;
+    let currentIndex = 0;
 
-    const visibleCount = getVisibleCount();
-    const maxIndex = Math.max(0, items.length - visibleCount);
-
-    prevBtn.disabled = currentIndex === 0;
-    nextBtn.disabled = currentIndex >= maxIndex;
-
-    const progress = maxIndex === 0 ? 100 : (currentIndex / maxIndex) * 100;
-    progressBar.style.width = `${progress}%`;
-  }
-
-  function goNext() {
-    const visibleCount = getVisibleCount();
-    const maxIndex = Math.max(0, items.length - visibleCount);
-    if (currentIndex < maxIndex) {
-      currentIndex++;
-      updateCarousel();
+    function getVisibleCount() {
+      const itemWidth = items[0].getBoundingClientRect().width;
+      const viewportWidth = viewport.getBoundingClientRect().width;
+      const count = Math.round(viewportWidth / itemWidth);
+      return Math.max(1, count);
     }
-  }
 
-  function goPrev() {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updateCarousel();
+    function updateCarousel() {
+      const itemWidth = items[0].getBoundingClientRect().width + 40; // gap = 40px
+      const translateX = -currentIndex * itemWidth;
+      track.style.transform = `translateX(${translateX}px)`;
+
+      const visibleCount = getVisibleCount();
+      const maxIndex = Math.max(0, items.length - visibleCount);
+
+      prevBtn.disabled = currentIndex === 0;
+      nextBtn.disabled = currentIndex >= maxIndex;
+
+      const progress = maxIndex === 0 ? 100 : (currentIndex / maxIndex) * 100;
+      progressBar.style.width = `${progress}%`;
     }
-  }
 
-  nextBtn.addEventListener('click', goNext);
-  prevBtn.addEventListener('click', goPrev);
+    function goNext() {
+      const visibleCount = getVisibleCount();
+      const maxIndex = Math.max(0, items.length - visibleCount);
+      if (currentIndex < maxIndex) {
+        currentIndex++;
+        updateCarousel();
+      }
+    }
 
-  window.addEventListener('resize', updateCarousel);
+    function goPrev() {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateCarousel();
+      }
+    }
 
-  updateCarousel();
+    nextBtn.addEventListener('click', goNext);
+    prevBtn.addEventListener('click', goPrev);
+
+    window.addEventListener('resize', updateCarousel);
+
+    updateCarousel();
+
+  }); // <-- cierre del forEach
 });
-
