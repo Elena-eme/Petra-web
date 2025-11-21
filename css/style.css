@@ -516,6 +516,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
+  margin-bottom: 10vh;
 }
 
 .home-card{
@@ -555,8 +556,8 @@ body {
   height: 48px;
   border-radius: 50%;
   border: none;
-  background: #fff;
-  color: #0f172a;
+  background: #f9efcd;
+  color: #c44a3b;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -615,7 +616,7 @@ body {
 
   position: relative;
   overflow: hidden;             
-  margin-top: 25vh;
+  margin-top: 6vh;
   margin-bottom: 5vh;
 
 }
@@ -753,6 +754,7 @@ body {
   font-size: 12px;
   cursor: pointer;
   text-transform: lowercase;
+  border-radius: 20px;
 }
 
 .cta-btn:hover {
