@@ -10,7 +10,6 @@ body {
 }
 
 
-
 /* ===== NAVBAR ===== */
 .nav-container {
   display: flex;
@@ -127,15 +126,12 @@ body {
   z-index: 1200;               
 }
 
-
 .cart-fab-icon {
   width: 100%;
   height: 100%;
   object-fit: cover;   
   border-radius: 50%;  /
 }
-
-
 
 .cart-fab-label {
   position: absolute;
@@ -196,8 +192,6 @@ body {
     font-size: 0.7rem;
   }
 }
-
-
 
 /* ===== PRELOADER ===== */
 #preloader {
@@ -365,7 +359,6 @@ body {
 }
 
 /* ===== GRID ===== */
-
 /* Contenedor centrado */
 .catalogo {
   display: flex;
@@ -412,7 +405,6 @@ body {
 .catalogo h2:hover {
   color: #a4312b;
 }
-
 
 .grid-layout {
   display: flex;
@@ -506,7 +498,6 @@ body {
   font-weight: 600;
   letter-spacing: 1px;
   text-align: left;
-  
 }
 
 .home-cards-grid{
@@ -615,7 +606,6 @@ body {
   overflow: hidden;             
   margin-top: 6vh;
   margin-bottom: 5vh;
-
 }
 
 /* TOOLTIP SUPERPUESTO SOBRE LA IMAGEN */
@@ -733,7 +723,6 @@ body {
   top: -6vh;                      
 }
 
-
 .newsletter-content h1 {
   font-size: 12px;
   letter-spacing: 0.12em;
@@ -745,7 +734,6 @@ body {
   font-size: 11px;
   margin-bottom: 24px;
 }
-
 
 .cta-btn {
   background-color: #c44a3b;
@@ -821,8 +809,6 @@ body {
 }
 
 /* --------- NUMEROS - HOME ---------- */
-
-
 .kpi-section {
   padding: 100px 0;             
 }
@@ -854,7 +840,6 @@ body {
   letter-spacing: 1px;
   text-align: left;
   font-family: 'Poppins', sans-serif;
-
 }
 
 .secciones-carousel {
@@ -868,7 +853,6 @@ body {
   overflow: hidden;
   flex: 1;
 }
-
 
 .secciones-track {
   display: flex;
@@ -1017,8 +1001,6 @@ body {
 }
 
 
-
-
 /* CATÁLOGO ALFOMBRAS */
 .container-alfombra{
   padding: 75px 0;
@@ -1090,7 +1072,6 @@ h1{
     width: 32px;
   }
 }
-
 
 /* --------------PÁGINA ABOUT US---------------------- */
 /* Sección fullscreen */
