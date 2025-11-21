@@ -371,9 +371,9 @@ body {
 /* Contenedor centrado */
 .catalogo {
   display: flex;
-  justify-content: center;  /* centro horizontal */
-  align-items: center;      /* centro vertical */
-  height: 10vh;            /* altura completa de la pantalla */
+  justify-content: center;  
+  align-items: center;    
+  height: 10vh;         
   text-align: center;
 
 }
