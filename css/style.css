@@ -855,6 +855,8 @@ body {
   font-weight: 300;
   letter-spacing: 1px;
   text-align: left;
+  font-family: 'Poppins', sans-serif;
+
 }
 
 /* Contenedor general del carrusel */
@@ -910,6 +912,7 @@ body {
   font-weight: 500;
   margin-top: 12px;
   text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
 }
 
 .seccion-precio {
@@ -948,6 +951,7 @@ body {
   padding: 0 10px;         /* pequeño espacio lateral */
   cursor: pointer;
   transition: opacity 0.25s ease, transform 0.2s ease;
+  font-family: 'Poppins', sans-serif;
 }
 
 .secciones-arrow:hover {
