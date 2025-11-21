@@ -1,6 +1,6 @@
 /* ===== BASE ===== */
 body {
-  background-color: #efd8b2; /* color arena */
+  background-color: #efd8b2; 
   margin: 0;
   font-family: 'Poppins', sans-serif;
 }
@@ -45,7 +45,6 @@ body {
   transform: scale(1.05);
 }
 
-/* Logo en móvil un poco más pequeño */
 .logo-mobile {
   height: 70px;
 }
@@ -119,34 +118,34 @@ body {
   border: none;
   padding: 0;
   margin: 0;
-  background-color: #a4312b;    /* color PETRA */
+  background-color: #a4312b;   
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
   cursor: pointer;
-  z-index: 1200;                /* por encima del contenido */
+  z-index: 1200;               
 }
 
-/* Imagen dentro del círculo */
+
 .cart-fab-icon {
   width: 100%;
   height: 100%;
-  object-fit: cover;   /* rellena el círculo completamente */
-  border-radius: 50%;  /* recorta la imagen dentro del círculo */
+  object-fit: cover;   
+  border-radius: 50%;  /
 }
 
 
-/* Texto "añadir" redondeado que sale fuera del círculo */
+
 .cart-fab-label {
   position: absolute;
-  right: 74px;                  /* se coloca a la izquierda del círculo */
+  right: 74px;                  
   top: 50%;
   transform: translateY(-50%);
   background-color: #a4312b;
   color: #fff;
   padding: 6px 16px;
-  border-radius: 999px;         /* pastilla redonda */
+  border-radius: 999px;         
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.15em;
@@ -162,7 +161,6 @@ body {
   transform: translateY(-50%) translateX(-4px);
 }
 
-/* En pantallas muy pequeñas, que no estorbe tanto */
 @media (max-width: 575px) {
   .cart-fab {
     bottom: 16px;
@@ -180,7 +178,7 @@ body {
 /* Texto encima del botón circular */
 .cart-fab-title {
   position: fixed;
-  bottom: 100px;                  /* Se coloca encima del botón */
+  bottom: 100px;                 
   right: 33px;
   font-size: 0.75rem;
   letter-spacing: 0.18em;
@@ -188,7 +186,7 @@ body {
   color: #333;
   font-weight: 500;
   z-index: 1200;
-  pointer-events: none;           /* No afecta al hover del botón */
+  pointer-events: none;          
 }
 
 @media (max-width: 575px) {
@@ -471,7 +469,7 @@ body {
 /* ===== VISTA EXPANDIDA ===== */
 .grid-layout.expanded {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* ahora 4 columnas */
+  grid-template-columns: repeat(4, 1fr); 
   grid-template-rows: repeat(2, 320px);
   gap: 0px;
   padding: 15px 0px;
@@ -648,7 +646,7 @@ body {
 /* CAPA SUPERPUESTA */
 .map-tooltip {
   position: absolute;
-  inset: 0;                          /* ocupa toda la imagen */
+  inset: 0;                          
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -728,7 +726,6 @@ body {
   z-index: 0;
 }
 
-/* Contenido (texto + botón) centrado por encima de la imagen */
 .newsletter-content {
   position: relative;
   z-index: 1;
@@ -736,7 +733,7 @@ body {
   top: -6vh;                      
 }
 
-/* Tipografía */
+
 .newsletter-content h1 {
   font-size: 12px;
   letter-spacing: 0.12em;
@@ -749,7 +746,7 @@ body {
   margin-bottom: 24px;
 }
 
-/* Botón rojo */
+
 .cta-btn {
   background-color: #c44a3b;
   color: #ffffff;
@@ -773,7 +770,7 @@ body {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
-  display: none;                  /* oculto por defecto */
+  display: none;                  
   align-items: center;
   justify-content: center;
   z-index: 1000;
@@ -860,7 +857,6 @@ body {
 
 }
 
-/* Contenedor general del carrusel */
 .secciones-carousel {
   position: relative;
   display: flex;
@@ -868,13 +864,12 @@ body {
   gap: 16px;
 }
 
-/* Ventana visible */
 .secciones-viewport {
   overflow: hidden;
   flex: 1;
 }
 
-/* Pista deslizante */
+
 .secciones-track {
   display: flex;
   gap: 20px;
@@ -883,7 +878,7 @@ body {
 
 /* Tarjeta de producto */
 .seccion-item {
-  flex: 0 0 25%;          /* 4 productos visibles en desktop */
+  flex: 0 0 25%;          
   min-width: 220px;
   display: flex;
   flex-direction: column;
@@ -900,14 +895,12 @@ body {
   justify-content: center;
 }
 
-/* Imagen */
 .seccion-img {
   max-height: 100%;
   max-width: 170px;
   object-fit: contain;
 }
 
-/* Texto */
 .seccion-nombre {
   font-size: 0.9rem;
   font-weight: 500;
@@ -924,9 +917,9 @@ body {
 
 /* Botón añadir */
 .btn-add {
-  background: #efd8b2;          /* fondo arena */
-  color: #596e39;               /* texto azul */
-  border: 1px solid #596e39;    /* borde azul */
+  background: #efd8b2;         
+  color: #596e39;               
+  border: 1px solid #596e39;    
   padding: 8px 16px;
   text-transform: uppercase;
   font-size: 0.75rem;
@@ -937,7 +930,7 @@ body {
 }
 
 .btn-add:hover {
-  background: #596e39;          /* se invierte con el texto */
+  background: #596e39;          
   color: #efd8b2;  
 }
 
@@ -945,11 +938,11 @@ body {
 .secciones-arrow {
   border: none;
   background: transparent;
-  color: #39546b;          /* azul */
-  font-size: 38px;         /* MÁS GRANDES */
-  font-weight: 200;        /* más finas */
+  color: #39546b;          
+  font-size: 38px;       
+  font-weight: 200;    
   line-height: 1;
-  padding: 0 10px;         /* pequeño espacio lateral */
+  padding: 0 10px;         
   cursor: pointer;
   transition: opacity 0.25s ease, transform 0.2s ease;
   font-family: 'Poppins', sans-serif;
@@ -987,13 +980,13 @@ body {
 
 @media (max-width: 992px) {
   .seccion-item {
-    flex: 0 0 33.33%;   /* 3 productos visibles */
+    flex: 0 0 33.33%;   
   }
 }
 
 @media (max-width: 768px) {
   .seccion-item {
-    flex: 0 0 50%;      /* 2 productos visibles */
+    flex: 0 0 50%;      
   }
 }
 
@@ -1008,8 +1001,8 @@ body {
   .seccion-img-wrapper {
     height: 360px;
     display: flex;
-    align-items: center;      /* <-- antes flex-end */
-    justify-content: center;  /* ya lo tienes, lo reforzamos */
+    align-items: center;      
+    justify-content: center;  
   }
 
   /* Imagen centrada y consistente */
@@ -1019,7 +1012,7 @@ body {
     max-height: 100%;
     object-fit: contain;
     display: block;
-    margin: 0 auto;           /* <-- asegura centrado horizontal */
+    margin: 0 auto;           
   }
 }
 
@@ -1104,7 +1097,7 @@ h1{
 .video-section {
   position: relative;
   width: 100%;
-  height: 100vh;  /* ocupa toda la pantalla */
+  height: 100vh;  
   overflow: hidden;
 }
 
@@ -1115,7 +1108,7 @@ h1{
   left: 50%;
   width: 100%;
   height: 100%;
-  object-fit: cover;        /* cubre toda la pantalla sin deformar */
+  object-fit: cover;        
   transform: translate(-50%, -50%);
   z-index: 1;
 }
@@ -1152,16 +1145,13 @@ h1{
 /* FOOTER REVEAL */
 .footer-hero {
   position: relative;
-  min-height: 80vh; /* altura del footer */
+  min-height: 80vh; 
   padding: 60px 20px 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-
   color: #ffffff;
-
-  /* Fondo negro + imagen + capa oscura */
   background-color: #000000;
   background-image:
     linear-gradient(rgba(5, 14, 49, 0.5), rgba(9, 12, 69, 0.5)), 
@@ -1173,8 +1163,6 @@ h1{
 }
 
   
-
-  /* Capa de degradado animado por encima de la imagen */
   .footer-overlay {
     position: absolute;
     inset: 0;
@@ -1291,7 +1279,6 @@ h1{
     margin: 0 auto 24px;
   }
   
-  /* Botones */
   .footer-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -1364,7 +1351,6 @@ h1{
     transform: translateY(-2px);
   }
   
-  /* Responsive pequeño */
   @media (max-width: 600px) {
     .footer-hero {
       min-height: 70vh;
@@ -1394,7 +1380,7 @@ h1{
   min-height: 70vh;
 }
 
-/* Columna izquierda */
+
 .catalogo-left {
   flex: 0 0 35%;
   display: flex;
@@ -1402,7 +1388,6 @@ h1{
   justify-content: space-between;
 }
 
-/* Títulos tipo "Warm / Armchair" */
 .catalogo-titulos {
   margin-bottom: 24px;
 }
@@ -1422,9 +1407,8 @@ h1{
   margin: 6px 0 0;
 }
 
-/* Lista de miniaturas (usa la animación actual de .product-square) */
 .product-square {
-  background-size: contain;      /* que quepa entera */
+  background-size: contain;      
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -1444,7 +1428,6 @@ h1{
   transition: box-shadow 0.3s ease;
 }
 
-/* Bloque de información bajo las miniaturas */
 .catalogo-info {
   font-size: 0.8rem;
   max-width: 260px;
@@ -1461,8 +1444,6 @@ h1{
 }
 
 
-
-/* Columna derecha con la imagen grande */
 .catalogo-right {
   flex: 0 0 55%;
   display: flex;
@@ -1477,9 +1458,6 @@ h1{
 }
 
 
-
-
-/* Responsive: en tablet/móvil se apila todo */
 @media (max-width: 992px) {
   .catalogo-animado {
     flex-direction: column;

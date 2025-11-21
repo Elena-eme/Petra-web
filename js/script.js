@@ -3,7 +3,6 @@ window.addEventListener("load", () => {
     const preloader = document.getElementById("preloader");
     const mainContent = document.getElementById("main-content");
   
-    // Espera 2 segundos antes de mostrar el contenido
     setTimeout(() => {
       preloader.style.opacity = "0";
       setTimeout(() => {
@@ -35,7 +34,6 @@ window.addEventListener("load", () => {
 
 $(document).ready(function() {
 
-  // Posiciones fijas sobre el mapa
   const posiciones = {
    item1: { top: "12%", left: "10%" },
     item2: { top: "18%", left: "78%" },
@@ -45,7 +43,6 @@ $(document).ready(function() {
     item6: { top: "50%", left: "38%" }
   };
 
-  // Aplicar posiciones iniciales
   for (let id in posiciones) {
     $("#" + id).css({
       top: posiciones[id].top,
@@ -53,9 +50,8 @@ $(document).ready(function() {
     });
   }
 
-  // Hacer que las imágenes se puedan arrastrar
   $(".map-item").draggable({
-    revert: true,            // vuelve a su sitio al soltar
+    revert: true,            
     revertDuration: 300
   });
 
@@ -98,12 +94,12 @@ if (newsletterOpenBtn && newsletterCloseBtn && newsletterModal) {
   });
 }
 
-// PRUEBA ANIMACIÓN CATALOGO
+// ANIMACIÓN CATALOGO
 document.addEventListener('DOMContentLoaded', function() {
   if (typeof anime === 'undefined') return;
 
   const squares = document.querySelectorAll('.product-square');
-  if (!squares.length) return; // si no hay cuadrados, no hace nada
+  if (!squares.length) return; 
 
   let activeSquare = null;
 
@@ -142,7 +138,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
       }
 
-      // Calculamos el centro de la pantalla y movemos el clicado
       const rect = square.getBoundingClientRect();
       const viewportWidth = window.innerWidth;
       const viewportHeight = window.innerHeight;
@@ -165,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function() {
         targets: square,
         translateX: translateX,
         translateY: translateY,
-        scale: 2,                  // tamaño al ampliarse
+        scale: 2,                  
         duration: 800,
         easing: 'easeOutBack'
       });
@@ -193,13 +188,11 @@ document.addEventListener('DOMContentLoaded', function () {
   if (cartFab) {
     cartFab.addEventListener('click', function () {
       alert('Producto añadido correctamente a la cesta');
-      // Más adelante aquí puedes sustituir el alert por lógica real de carrito :)
     });
   }
 });
 
 
-// CARRUSEL CATALOGO-SECCIONES
 // CARRUSEL CATALOGO-SECCIONES
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -224,7 +217,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function updateCarousel() {
-      const itemWidth = items[0].getBoundingClientRect().width + 40; // gap = 40px
+      const itemWidth = items[0].getBoundingClientRect().width + 40; 
       const translateX = -currentIndex * itemWidth;
       track.style.transform = `translateX(${translateX}px)`;
 
@@ -261,7 +254,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     updateCarousel();
 
-  }); // <-- cierre del forEach
+  });
 });
 
 
