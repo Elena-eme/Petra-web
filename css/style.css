@@ -855,6 +855,8 @@ body {
   font-weight: 300;
   letter-spacing: 1px;
   text-align: left;
+  font-family: 'Poppins', sans-serif;
+
 }
 
 /* Contenedor general del carrusel */
@@ -910,6 +912,7 @@ body {
   font-weight: 500;
   margin-top: 12px;
   text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
 }
 
 .seccion-precio {
@@ -920,47 +923,48 @@ body {
 
 /* Botón añadir */
 .btn-add {
-  background: #274440d4;
-  color: white;
-  border: none;
+  background: #efd8b2;          /* fondo arena */
+  color: #596e39;               /* texto azul */
+  border: 1px solid #596e39;    /* borde azul */
   padding: 8px 16px;
   text-transform: uppercase;
   font-size: 0.75rem;
   letter-spacing: 1px;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: opacity 0.3s ease;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 .btn-add:hover {
-  opacity: 0.8;
+  background: #596e39;          /* se invierte con el texto */
+  color: #efd8b2;  
 }
 
 /* Flechas */
 .secciones-arrow {
   border: none;
-  background: #000;
-  color: #fff;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: transparent;
+  color: #39546b;          /* azul */
+  font-size: 38px;         /* MÁS GRANDES */
+  font-weight: 200;        /* más finas */
+  line-height: 1;
+  padding: 0 10px;         /* pequeño espacio lateral */
   cursor: pointer;
-  flex-shrink: 0;
-  font-size: 18px;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.25s ease, transform 0.2s ease;
+  font-family: 'Poppins', sans-serif;
 }
 
 .secciones-arrow:hover {
-  opacity: 0.8;
+  opacity: 0.6;
+  transform: translateY(-2px);
 }
 
 .secciones-arrow[disabled] {
-  opacity: 0.3;
+  opacity: 0.2;
   cursor: default;
+  transform: none;
 }
+
 
 /* Barra de progreso */
 .secciones-progress {
