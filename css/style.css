@@ -995,9 +995,31 @@ body {
 
 @media (max-width: 576px) {
   .seccion-item {
-    flex: 0 0 100%;     /* 1 producto visible */
+    flex: 0 0 100%;
+    min-width: 100%;
+    padding: 0 6px;
+  }
+
+  /* Wrapper centrado SIEMPRE */
+  .seccion-img-wrapper {
+    height: 360px;
+    display: flex;
+    align-items: center;      /* <-- antes flex-end */
+    justify-content: center;  /* ya lo tienes, lo reforzamos */
+  }
+
+  /* Imagen centrada y consistente */
+  .seccion-img {
+    width: 80vw;
+    max-width: 260px;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;           /* <-- asegura centrado horizontal */
   }
 }
+
+
 
 
 /* CATÁLOGO ALFOMBRAS */
