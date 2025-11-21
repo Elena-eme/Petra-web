@@ -1,50 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PETRA - Home</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PETRA - Home</title>
 
-  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
 
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-  <!-- PRELOADER -->
-  <div id="preloader">
-    <img src="img/logo petra.png" alt="PETRA Logo" class="preloader-logo">
-  </div>
+  <body>
+    <!-- PRELOADER -->
+    <div id="preloader">
+      <img src="img/logo petra.png" alt="PETRA Logo" class="preloader-logo">
+    </div>
 
-  <!-- ===== CONTENIDO PRINCIPAL ===== -->
-  <div id="main-content" class="hidden">
-
-   <!-- NAVBAR -->
+    <div id="main-content" class="hidden">
+    <!-- NAVBAR -->
       <!-- Navbar desktop  -->
-    <nav class="navbar navbar-light bg-sand d-none d-md-block">
-      <div class="container nav-container">
-        <a href="catalogo.html" class="nav-link text-dark fw-semibold">Catálogo</a>
+      <nav class="navbar navbar-light bg-sand d-none d-md-block">
+        <div class="container nav-container">
+          <a href="catalogo.html" class="nav-link text-dark fw-semibold">Catálogo</a>
 
-        <a href="index.html" class="navbar-brand">
-          <img src="img/logo petra.png" alt="PETRA Logo" class="logo">
-        </a>
+          <a href="index.html" class="navbar-brand">
+            <img src="img/logo petra.png" alt="PETRA Logo" class="logo">
+          </a>
 
-        <a href="aboutus.html" class="nav-link text-dark fw-semibold">Sobre nosotras</a>
-      </div>
-    </nav>
+          <a href="aboutus.html" class="nav-link text-dark fw-semibold">Sobre nosotras</a>
+        </div>
+      </nav>
 
       <!-- Navbar mobile/table -->
-    <nav class="navbar navbar-light bg-sand d-flex d-md-none">
-      <div class="container-fluid d-flex justify-content-between align-items-center px-3">
-
-        <a href="index.html" class="navbar-brand d-flex align-items-center">
-          <img src="img/logo petra.png" alt="PETRA Logo" class="logo logo-mobile">
-        </a>
+      <nav class="navbar navbar-light bg-sand d-flex d-md-none">
+        <div class="container-fluid d-flex justify-content-between align-items-center px-3">
+          <a href="index.html" class="navbar-brand d-flex align-items-center">
+            <img src="img/logo petra.png" alt="PETRA Logo" class="logo logo-mobile">
+          </a>
 
             <!-- BOTÓN HAMBURGUESA -->
             <button class="navbar-toggler ms-auto" type="button" 
@@ -54,30 +51,30 @@
                     aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
+        </div>
+      </nav>
+
+    <!-- MENÚ LATERAL -->
+    <div class="offcanvas offcanvas-end bg-sand" tabindex="-1" id="sideMenu">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Menú</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
       </div>
-    </nav>
 
-<!-- MENÚ LATERAL -->
-<div class="offcanvas offcanvas-end bg-sand" tabindex="-1" id="sideMenu">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title">Menú</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-  </div>
-
-  <div class="offcanvas-body">
-    <ul class="navbar-nav">
-      <li class="nav-item mb-2">
-        <a href="index.html" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item mb-2">
-        <a href="catalogo.html" class="nav-link">Catálogo</a>
-      </li>
-      <li class="nav-item mb-2">
-        <a href="aboutus.html" class="nav-link">About us</a>
-      </li>
-    </ul>
-  </div>
-</div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav">
+          <li class="nav-item mb-2">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item mb-2">
+            <a href="catalogo.html" class="nav-link">Catálogo</a>
+          </li>
+          <li class="nav-item mb-2">
+            <a href="aboutus.html" class="nav-link">About us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
 
 
     <!-- CARRUSEL CAMPAÑA -->
@@ -117,7 +114,7 @@
       </button>
     </div>
 
-<!-- APARTADO DE DATOS -->
+    <!-- APARTADO DE DATOS -->
     <!-- NUMEROS -->
     <section class="kpi-section">
       <div class="container text-center">
@@ -139,218 +136,209 @@
     </section>
 
     <!-- GRID PRINCIPAL -->
-  <div class="catalogo">
-  <h2>CATÁLOGO</h2>
-</div >
-  <section id="grid" class="container-fluid grid-layout">
-    <div onclick="location.href='catalogo.html'" class="grid-item color1" data-category=""></div>
-    <div onclick="location.href='catalogo.html'" class="grid-item img1" data-category="Sofás"></div>
-    <div onclick="location.href='catalogo.html'" class="grid-item color2" data-category=""></div>
-    <div onclick="location.href='catalogo.html'" class="grid-item img2" data-category="Sillones"></div>
-    <div onclick="location.href='catalogo.html'" class="grid-item color3" data-category="Decoración"></div>
-    <div onclick="location.href='catalogo.html'" class="grid-item img3" data-category="Lámparas"></div>
-    <div onclick="location.href='catalogo.html'" class="grid-item img4" data-category="Muebles"></div>
-    <div onclick="location.href='catalogo.html'" class="grid-item color4" data-category="Accesorios"></div>
-  </section>
+    <div class="catalogo">
+      <h2>CATÁLOGO</h2>
+    </div >
 
-  
-<!--   HOME  3 PRODUCTOS  -->
-<section class="home-cards container py-5">
-  <h2 class="home-cards-title mb-4">Comparte tu decoración!</h2>
+    <section id="grid" class="container-fluid grid-layout">
+      <div onclick="location.href='catalogo.html'" class="grid-item color1" data-category=""></div>
+      <div onclick="location.href='catalogo.html'" class="grid-item img1" data-category="Sofás"></div>
+      <div onclick="location.href='catalogo.html'" class="grid-item color2" data-category=""></div>
+      <div onclick="location.href='catalogo.html'" class="grid-item img2" data-category="Sillones"></div>
+      <div onclick="location.href='catalogo.html'" class="grid-item color3" data-category="Decoración"></div>
+      <div onclick="location.href='catalogo.html'" class="grid-item img3" data-category="Lámparas"></div>
+      <div onclick="location.href='catalogo.html'" class="grid-item img4" data-category="Muebles"></div>
+      <div onclick="location.href='catalogo.html'" class="grid-item color4" data-category="Accesorios"></div>
+    </section>
 
-  <div class="home-cards-grid">
+    <!-- TARJETAS PUBLICACIONES CLIENTES -->
+    <section class="home-cards container py-5">
+        <h2 class="home-cards-title mb-4">Comparte tu decoración!</h2>
 
-    <!-- CARD 1 -->
-    <article class="home-card">
-      <div class="home-card-imgwrap">
-        <img src="https://i.pinimg.com/1200x/78/aa/a5/78aaa58ff9b2afef7ad1bb9417b139be.jpg" alt="Producto 1" class="home-card-img">
-        <button class="home-card-cart" aria-label="Añadir a la cesta">
-          🛒
-        </button>
+      <div class="home-cards-grid">
+        <!-- CARD 1 -->
+        <article class="home-card">
+          <div class="home-card-imgwrap">
+            <img src="https://i.pinimg.com/1200x/78/aa/a5/78aaa58ff9b2afef7ad1bb9417b139be.jpg" alt="Producto 1" class="home-card-img">
+            <button class="home-card-cart" aria-label="Añadir a la cesta">
+              🛒
+            </button>
+          </div>
+
+          <div class="home-card-body">
+            <h4 class="home-card-name">Sofa</h4>
+            <p class="home-card-price">Cícladas</p>
+          </div>
+        </article>
+
+        <!-- CARD 2 -->
+        <article class="home-card">
+          <div class="home-card-imgwrap">
+            <img src="https://i.pinimg.com/736x/97/85/79/978579bd1855641bffdea92fc61dd5fe.jpg" alt="Producto 2" class="home-card-img">
+            <button class="home-card-cart" aria-label="Añadir a la cesta">
+              🛒
+            </button>
+          </div>
+
+          <div class="home-card-body">
+            <h4 class="home-card-name">Sofa</h4>
+            <p class="home-card-price">Circe</p>
+          </div>
+        </article>
+
+        <!-- CARD 3 -->
+        <article class="home-card">
+          <div class="home-card-imgwrap">
+            <img src="https://i.pinimg.com/736x/cf/ae/34/cfae34552db396d04f23b9e69829593c.jpg" alt="Producto 3" class="home-card-img">
+            <button class="home-card-cart" aria-label="Añadir a la cesta">
+              🛒
+            </button>
+          </div>
+
+          <div class="home-card-body">
+            <h4 class="home-card-name">Cojines y Sofa</h4>
+            <p class="home-card-price">Nínive</p>
+          </div>
+        </article>
       </div>
+    </section>
 
-      <div class="home-card-body">
-        <h4 class="home-card-name">Sofa</h4>
-        <p class="home-card-price">Cícladas</p>
-      </div>
-    </article>
-
-    <!-- CARD 2 -->
-    <article class="home-card">
-      <div class="home-card-imgwrap">
-        <img src="https://i.pinimg.com/736x/97/85/79/978579bd1855641bffdea92fc61dd5fe.jpg" alt="Producto 2" class="home-card-img">
-        <button class="home-card-cart" aria-label="Añadir a la cesta">
-          🛒
-        </button>
-      </div>
-
-      <div class="home-card-body">
-        <h4 class="home-card-name">Sofa</h4>
-        <p class="home-card-price">Circe</p>
-      </div>
-    </article>
-
-    <!-- CARD 3 -->
-    <article class="home-card">
-      <div class="home-card-imgwrap">
-        <img src="https://i.pinimg.com/736x/cf/ae/34/cfae34552db396d04f23b9e69829593c.jpg" alt="Producto 3" class="home-card-img">
-        <button class="home-card-cart" aria-label="Añadir a la cesta">
-          🛒
-        </button>
-      </div>
-
-      <div class="home-card-body">
-        <h4 class="home-card-name">Cojines y Sofa</h4>
-        <p class="home-card-price">Nínive</p>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-
-   
+    <!-- APARTADO CATÁLOGO -->
     <div class="catalogo">
     <h2>HISTORIA DE NUESTRO CATALOGO</h2>
     </div>
 
-   <section id="mapa-collage">
-  <!-- ITEM 1 -->
-  <div class="map-item" id="item1">
-    <img src="https://i.pinimg.com/1200x/d9/c9/64/d9c964b7d3248a3e61f0ecf17a1ba205.jpg" alt="Taller artesanal">
-    <div class="map-tooltip">
-      <h3>Taller artesanal</h3>
-      <p>Donde nace nuestra colección de cerámica más icónica.</p>
-      <a href="catalogo.html" class="map-btn">Ver piezas</a>
-    </div>
-  </div>
+    <section id="mapa-collage">
+      <!-- ITEM 1 -->
+      <div class="map-item" id="item1">
+        <img src="https://i.pinimg.com/1200x/d9/c9/64/d9c964b7d3248a3e61f0ecf17a1ba205.jpg" alt="Taller artesanal">
+        <div class="map-tooltip">
+          <h3>Taller artesanal</h3>
+          <p>Donde nace nuestra colección de cerámica más icónica.</p>
+          <a href="catalogo.html" class="map-btn">Ver piezas</a>
+        </div>
+      </div>
 
-  <!-- ITEM 2 -->
-  <div class="map-item" id="item2">
-    <img src="https://i.pinimg.com/1200x/a3/f8/3f/a3f83fa0ad8bfda8ec8cb8547176ceba.jpg" alt="Showroom Petra">
-    <div class="map-tooltip">
-      <h3>Showroom Petra</h3>
-      <p>Un espacio donde experimentar nuestras composiciones.</p>
-      <a href="catalogo.html" class="map-btn">Explorar</a>
-    </div>
-  </div>
+      <!-- ITEM 2 -->
+      <div class="map-item" id="item2">
+        <img src="https://i.pinimg.com/1200x/a3/f8/3f/a3f83fa0ad8bfda8ec8cb8547176ceba.jpg" alt="Showroom Petra">
+        <div class="map-tooltip">
+          <h3>Showroom Petra</h3>
+          <p>Un espacio donde experimentar nuestras composiciones.</p>
+          <a href="catalogo.html" class="map-btn">Explorar</a>
+        </div>
+      </div>
 
-  <!-- ITEM 3 -->
-  <div class="map-item" id="item3">
-    <img src="https://i.pinimg.com/736x/8f/fa/4a/8ffa4a7f369849ff66d8eb1c744beddf.jpg" alt="Edición limitada">
-    <div class="map-tooltip">
-      <h3>Edición limitada</h3>
-      <p>Piezas únicas inspiradas en paisajes desérticos.</p>
-      <a href="catalogo.html" class="map-btn">Ver colección</a>
-    </div>
-  </div>
+      <!-- ITEM 3 -->
+      <div class="map-item" id="item3">
+        <img src="https://i.pinimg.com/736x/8f/fa/4a/8ffa4a7f369849ff66d8eb1c744beddf.jpg" alt="Edición limitada">
+        <div class="map-tooltip">
+          <h3>Edición limitada</h3>
+          <p>Piezas únicas inspiradas en paisajes desérticos.</p>
+          <a href="catalogo.html" class="map-btn">Ver colección</a>
+        </div>
+      </div>
 
-  <!-- ITEM 4 -->
-  <div class="map-item" id="item4">
-    <img src="https://i.pinimg.com/1200x/05/e0/e8/05e0e8d507da6c9173cc9367eab3ec9e.jpg" alt="Espacio Petra">
-    <div class="map-tooltip">
-      <h3>Espacio Petra</h3>
-      <p>Interiorismo cálido, piezas en tonos arena y terracota.</p>
-      <a href="catalogo.html" class="map-btn">Ver muebles</a>
-    </div>
-  </div>
+      <!-- ITEM 4 -->
+      <div class="map-item" id="item4">
+        <img src="https://i.pinimg.com/1200x/05/e0/e8/05e0e8d507da6c9173cc9367eab3ec9e.jpg" alt="Espacio Petra">
+        <div class="map-tooltip">
+          <h3>Espacio Petra</h3>
+          <p>Interiorismo cálido, piezas en tonos arena y terracota.</p>
+          <a href="catalogo.html" class="map-btn">Ver muebles</a>
+        </div>
+      </div>
 
-  <!-- ITEM 5 -->
-  <div class="map-item" id="item5">
-    <img src="https://i.pinimg.com/1200x/3e/f6/2d/3ef62de140865fcd767da2981a9fc9e1.jpg" alt="Zona textil">
-    <div class="map-tooltip">
-      <h3>Zona textil</h3>
-      <p>Tejidos naturales, lino y algodón en tonos suaves.</p>
-      <a href="catalogo.html" class="map-btn">Ver textiles</a>
-    </div>
-  </div>
+      <!-- ITEM 5 -->
+      <div class="map-item" id="item5">
+        <img src="https://i.pinimg.com/1200x/3e/f6/2d/3ef62de140865fcd767da2981a9fc9e1.jpg" alt="Zona textil">
+        <div class="map-tooltip">
+          <h3>Zona textil</h3>
+          <p>Tejidos naturales, lino y algodón en tonos suaves.</p>
+          <a href="catalogo.html" class="map-btn">Ver textiles</a>
+        </div>
+      </div>
 
-  <!-- ITEM 6 -->
-  <div class="map-item" id="item6">
-    <img src="https://i.pinimg.com/1200x/20/7a/04/207a04658d1623de42b77356168eedbe.jpg" alt="Decoración">
-    <div class="map-tooltip">
-      <h3>Decoración</h3>
-      <p>Detalles que terminan de construir la atmósfera Petra.</p>
-      <a href="catalogo.html" class="map-btn">Ver detalles</a>
-    </div>
-  </div>
-</section>
-
-
-  </div>
-
-  <!--NEWSLETTER -->
-  <section id="newsletter" class="newsletter-section">
-    <img
-      src="img/img_jarrones4.png"
-      alt="Jarrones"
-      class="newsletter-bg"
-    />
-
-
-    <div class="newsletter-content">
-      <h1>SUBSCRÍBETE A NUESTRA NEWSLETTER</h1>
-      <p>Haz click para registrarte y tener acceso a descuentos exclusivos</p>
-      <button
-        type="button"
-        id="newsletter-open-modal"
-        class="cta-btn"
-      >Registrate</button>
+      <!-- ITEM 6 -->
+      <div class="map-item" id="item6">
+        <img src="https://i.pinimg.com/1200x/20/7a/04/207a04658d1623de42b77356168eedbe.jpg" alt="Decoración">
+        <div class="map-tooltip">
+          <h3>Decoración</h3>
+          <p>Detalles que terminan de construir la atmósfera Petra.</p>
+          <a href="catalogo.html" class="map-btn">Ver detalles</a>
+        </div>
+      </div>
+    </section>
     </div>
 
-    <!-- POP UP / MODAL -->
-    <div
-      id="newsletter-modal"
-      class="newsletter-modal"
-      aria-hidden="true"
-    >
-      <div class="newsletter-modal-content">
+    <!--NEWSLETTER -->
+    <section id="newsletter" class="newsletter-section">
+      <img src="img/img_jarrones4.png" alt="Jarrones" class="newsletter-bg" />
+
+
+      <div class="newsletter-content">
+        <h1>SUBSCRÍBETE A NUESTRA NEWSLETTER</h1>
+        <p>Haz click para registrarte y tener acceso a descuentos exclusivos</p>
         <button
           type="button"
-          id="newsletter-close-modal"
-          class="newsletter-modal-close"
-          aria-label="Cerrar"
-        >
-          &times;
-        </button>
-
-        <h2>Newsletter</h2>
-        <p>Introduce tus datos para suscribirte.</p>
-
-       <div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label">Email address</label>
-  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="checkIndeterminate">
-  <label class="form-check-label" for="checkIndeterminate">
-    News and Promotions
-  </label>
-</div>
-
-          <button type="submit" class="cta-btn">
-            enviar
-          </button>
-        
+          id="newsletter-open-modal"
+          class="cta-btn"
+        >Registrate</button>
       </div>
-    </div>
-  </section>
 
-    <div class="cart-fab-title">CESTA</div>
+      <!-- POP UP / MODAL -->
+      <div
+        id="newsletter-modal"
+        class="newsletter-modal"
+        aria-hidden="true"
+      >
+        <div class="newsletter-modal-content">
+          <button
+            type="button"
+            id="newsletter-close-modal"
+            class="newsletter-modal-close"
+            aria-label="Cerrar"
+          >
+            &times;
+          </button>
 
-    <button id="cart-fab" class="cart-fab" type="button">
-      <img src="https://i.pinimg.com/1200x/3b/51/db/3b51db92af89406404089f4aa7611f87.jpg" alt="Cesta" class="cart-fab-icon">
-      <span class="cart-fab-label">añadir</span>
-    </button>
-  
+          <h2>Newsletter</h2>
+          <p>Introduce tus datos para suscribirte.</p>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-   <script src="js/jquery-3.7.1.js"></script>
-  <script src="js/script.js"></script>
-</body>
+        <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="checkIndeterminate">
+    <label class="form-check-label" for="checkIndeterminate">
+      News and Promotions
+    </label>
+  </div>
+
+            <button type="submit" class="cta-btn">
+              enviar
+            </button>
+          
+        </div>
+      </div>
+    </section>
+
+      <div class="cart-fab-title">CESTA</div>
+
+      <button id="cart-fab" class="cart-fab" type="button">
+        <img src="https://i.pinimg.com/1200x/3b/51/db/3b51db92af89406404089f4aa7611f87.jpg" alt="Cesta" class="cart-fab-icon">
+        <span class="cart-fab-label">añadir</span>
+      </button>
+    
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 
 <!-- FOOTER -->
 <footer class="footer-hero">
