@@ -425,7 +425,6 @@ body {
   overflow: hidden;
   transition: all 1s ease-in-out;
   padding: 40px 140px;
-  margin-top: 70px;      /* MÁS ESPACIO entre carrusel y grid */
 }
 
 .grid-item {
