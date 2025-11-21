@@ -28,12 +28,9 @@ window.addEventListener("load", () => {
     toggleGrid();
   });
   
+
   document.querySelectorAll('.grid-item').forEach(item => {
-    item.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const category = item.dataset.category.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-');
-      window.location.href = `${category}.html`;
-    });
+    item.onclick = () => window.location.href = "catalogo.html";
   });
 
 $(document).ready(function() {
