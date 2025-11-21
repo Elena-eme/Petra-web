@@ -851,7 +851,7 @@ body {
 }
 
 .catalogo-secciones .section-title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 300;
   letter-spacing: 1px;
   text-align: left;
@@ -968,7 +968,7 @@ body {
 
 /* Barra de progreso */
 .secciones-progress {
-  margin-top: 18px;
+  margin-top: 40px;
   height: 2px;
   background: rgba(0,0,0,0.15);
 }
