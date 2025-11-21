@@ -825,7 +825,7 @@ body {
 }
 
 .kpi-item {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .kpi-number {
@@ -851,8 +851,8 @@ body {
 }
 
 .catalogo-secciones .section-title {
-  font-size: 1.8rem;
-  font-weight: 600;
+  font-size: 2rem;
+  font-weight: 300;
   letter-spacing: 1px;
   text-align: left;
 }
@@ -874,7 +874,7 @@ body {
 /* Pista deslizante */
 .secciones-track {
   display: flex;
-  gap: 40px;
+  gap: 20px;
   transition: transform 0.4s ease;
 }
 
@@ -900,7 +900,7 @@ body {
 /* Imagen */
 .seccion-img {
   max-height: 100%;
-  max-width: 180px;
+  max-width: 170px;
   object-fit: contain;
 }
 
