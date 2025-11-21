@@ -700,6 +700,11 @@ body {
   opacity: 1;
 }
 
+@media (max-width: 1024px) {
+  #mapa-collage {
+    display: none;
+  }
+}
 
 /* NEWSLETTER - HOME */
 .newsletter-section {
